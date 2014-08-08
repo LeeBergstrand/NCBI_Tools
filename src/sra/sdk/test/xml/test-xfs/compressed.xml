@@ -1,0 +1,9 @@
+<ROOT version="1.0.12">
+  <container id="1" path="compressed.tgz" name="compressed.tgz" mtime="2011-04-01T19:43:31Z" filetype="Compressed/GnuZip" md5="f8b61a017f675f58f8313adbbdb94a4a" crc32="fe4e6a71" size="179">
+    <archive id="2" path="compressed.tgz/compressed.tar" name="compressed.tar" mtime="2011-04-01T19:43:31Z" filetype="Archive/TapeArchive" md5="1e50cc33fde9345e4e887de13f3167cb" size="10240">
+      <directory name="dir" mtime="2011-04-01T19:43:09Z">
+        <file id="3" path="compressed.tgz/compressed.tar/dir/file" name="file" mtime="2011-04-01T19:43:09Z" filetype="Unknown/Unknown" md5="edb398af75a241acdc34e93dbed1acb8" offset="1024" size="20"/>
+      </directory>
+    </archive>
+  </container>
+</ROOT>

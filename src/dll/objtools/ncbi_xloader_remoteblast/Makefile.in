@@ -1,0 +1,8 @@
+#################################
+# $Id: Makefile.in 123540 2008-04-03 16:40:54Z bealer $
+#################################
+
+DLL_PROJ = ncbi_xloader_remoteblast
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

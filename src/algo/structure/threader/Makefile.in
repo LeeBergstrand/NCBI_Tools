@@ -1,0 +1,7 @@
+# $Id: Makefile.in 71898 2005-10-31 21:26:38Z thiessen $
+#################################
+
+LIB_PROJ = xstruct_thread
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

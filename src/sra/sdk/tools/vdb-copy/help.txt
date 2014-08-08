@@ -1,0 +1,71 @@
+vdb-copy extended help:
+
+
+vdb-copy makes a copy of a vdb-table.
+It has 2 mandatory parameters:
+
+$vdb-copy src_tab dst_tab
+
+( this follows the syntax of tools like "cp" etc. )
+
+"src_tab" can be a path in os-native notation or an accession.
+"src_tab" as path can be a directory, a kar-file or a tar-file.
+vdb-copy will always create a directory as output (not a kar- or tar-file).
+
+$vdb-copy ~/tables/tab1 newtab
+will make a copy of a table (directory) into a new table "newtab"
+in the current directory (on linux/mac).
+
+$vdb-copy SRR000077.kar newtab
+will make a copy of a table (kar.file) into a new table "newtab"
+in the current directory.
+
+c:\>vdb-copy C:\Users\name_of_user\tables\tab1 newtab
+will make a copy of a table (directory) into a new table "newtab"
+in the current directory (on windows).
+
+
+------------------------------------------------------------------------
+If the destination does already exist, vdb-copy does not overwrite it
+but exits with an error-message. The user can use the 
+"force-switch: -f" to force vdb-copy to overwrite an existing target.
+If the target is a locked vdb-table, the "force-switch" is not
+enough, the user needs the "unlock-switch: -u" in addition:
+
+$vdb-copy src_tab locked_tab -fu
+
+
+------------------------------------------------------------------------
+Per default vdb-copy probes the "src_tab" to resolve as an accession.
+If the necessary infrastructure is not in place / not configured or
+too slow, this can be switched off with the "no-accession-switch: -a"
+
+
+------------------------------------------------------------------------
+vdb-copy performs the copy-operation per default without a progress-bar,
+assuming it is mostly used by scripts. For interactive use the
+progress-bar can be switched on with the "progress-switch: -p"
+
+
+------------------------------------------------------------------------
+Per default vdb-copy copies all rows of the source-table into
+the destination. The number of rows can be restricted with
+the "row-option: -R".
+
+$vdb-copy src dst -R1,5,20          (only rows 1, 5 and 20)
+$vdb-copy src dst -R1-20            (only rows 1 to 20)
+$vdb-copy src dst -R1-20,30-50,107  (only rows 1 to 20, 30 to 50 and 107)
+
+
+------------------------------------------------------------------------
+Per default vdb-copy copies all columns it finds in the source-table
+that are writable into the destination-table. The columns can be restricted
+with the "column-option: -C".
+
+$vdb-copy src dst -CREAD,LABEL,NAME,QUALITY     (only these columns)
+
+If all writable columns have to be copied except some columns, the
+"exclude-option: -x" can be used.
+
+$vdb-copy src dst -xQUALITY                     (all columns, but QUALITY)
+

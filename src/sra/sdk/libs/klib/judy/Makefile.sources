@@ -1,0 +1,32 @@
+# $Id: Makefile.sources 14717 2013-03-08 15:25:05Z ucko $
+
+all source: check-tables
+
+include $(builddir)/Makefile.mk
+
+clean purge:
+	-$(RMDIR) expected
+
+variant=$(NCBI_PLATFORM_BITS)
+# OS-independent, at least.
+
+check-tables:
+# The use of "command" works around Solaris's /bin/sh's lack of support for -nt.
+	@if [ -n "$(NCBI_PLATFORM_BITS)" -a -x $(bindir)/Judy1TablesGen ] && \
+	   command [ $(bindir)/JudyLTablesGen -nt \
+	             $(srcdir)/JudyLTables-$(variant).c ]; \
+	then \
+	    echo "Comparing Judy[1L]Tables-$(variant).c with Judy[1L]TablesGen output." ; \
+	    mkdir -p expected ; \
+	    cd expected  &&  \
+	    if $(bindir)/Judy1TablesGen ; then \
+	        cmp Judy1Tables.c $(srcdir)/Judy1Tables-$(variant).c ; \
+	    else \
+	        echo "WARNING: Judy1Tables failed with error $?." ; \
+	    fi && \
+	    if $(bindir)/JudyLTablesGen ; then \
+	        cmp JudyLTables.c $(srcdir)/JudyLTables-$(variant).c ; \
+	    else \
+	        echo "WARNING: JudyLTables failed with error $?." ; \
+	    fi ; \
+	fi

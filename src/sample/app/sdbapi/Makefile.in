@@ -1,0 +1,8 @@
+# $Id: Makefile.in 373538 2012-08-30 13:24:31Z mcelhany $
+
+APP_PROJ = sdbapi_simple sdbapi_advanced_features
+
+REQUIRES = dbapi FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

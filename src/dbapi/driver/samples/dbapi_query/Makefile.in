@@ -1,0 +1,6 @@
+# $Id: Makefile.in 13200 2002-07-18 15:49:39Z starchen $
+
+APP_PROJ = dbapi_query
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

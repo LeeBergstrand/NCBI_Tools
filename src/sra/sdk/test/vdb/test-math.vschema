@@ -1,0 +1,61 @@
+version 1;
+
+include 'vdb/vdb.vschema';
+
+
+table t_round #1.0
+{
+        column F32 xform
+        {
+                read = .xform;
+                validate =  < F32 > compare ( ctl, .xform );
+        }
+
+        column F32 ctl = .ctl;
+
+        physical F32 .ctl = ctl;
+
+        physical F32 .xform = round ( xform );
+};
+table t_trunc #1.0
+{
+        column F32 xform
+        {
+                read = .xform;
+                validate =  < F32 > compare ( ctl, .xform );
+        }
+
+        column F32 ctl = .ctl;
+
+        physical F32 .ctl = ctl;
+
+        physical F32 .xform = trunc ( xform );
+};
+table t_floor #1.0
+{
+        column F32 xform
+        {
+                read = .xform;
+                validate =  < F32 > compare ( ctl, .xform );
+        }
+
+        column F32 ctl = .ctl;
+
+        physical F32 .ctl = ctl;
+
+        physical F32 .xform = floor ( xform );
+};
+table t_ceil #1.0
+{
+        column F32 xform
+        {
+                read = .xform;
+                validate =  < F32 > compare ( ctl, .xform );
+        }
+
+        column F32 ctl = .ctl;
+
+        physical F32 .ctl = ctl;
+
+        physical F32 .xform = ceil ( xform );
+};

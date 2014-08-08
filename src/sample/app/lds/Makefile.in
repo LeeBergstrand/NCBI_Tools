@@ -1,0 +1,9 @@
+# $Id: Makefile.in 372308 2012-08-16 15:22:00Z vakatov $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = lds2_sample lds_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

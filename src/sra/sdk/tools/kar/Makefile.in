@@ -1,0 +1,6 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+APP_PROJ = kar sra-kar
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

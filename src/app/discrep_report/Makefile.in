@@ -1,0 +1,12 @@
+# $Id: Makefile.in 379079 2012-10-26 17:08:00Z chenj $
+#
+# Makefile:  for C++ discrepancy report
+# Author: J. Chen
+#
+
+EXPENDABLE_APP_PROJ = disc_report
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta
+
+WATCHERS = chenj

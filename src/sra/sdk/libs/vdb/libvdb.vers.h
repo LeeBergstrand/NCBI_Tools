@@ -1,0 +1,1 @@
+#define LIBVDB_VERS 0x02060004

@@ -1,0 +1,4 @@
+*.vers.h
+*.txt
+*.sh
+bigfile.*

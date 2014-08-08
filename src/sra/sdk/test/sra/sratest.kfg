@@ -1,0 +1,85 @@
+# ===========================================================================
+#
+#                            PUBLIC DOMAIN NOTICE
+#               National Center for Biotechnology Information
+#
+#  This software/database is a "United States Government Work" under the
+#  terms of the United States Copyright Act.  It was written as part of
+#  the author's official duties as a United States Government employee and
+#  thus cannot be copyrighted.  This software/database is freely available
+#  to the public for use. The National Library of Medicine and the U.S.
+#  Government have not placed any restriction on its use or reproduction.
+#
+#  Although all reasonable efforts have been taken to ensure the accuracy
+#  and reliability of the software and data, the NLM and the U.S.
+#  Government do not and cannot warrant the performance or results that
+#  may be obtained by using this software or data. The NLM and the U.S.
+#  Government disclaim all warranties, express or implied, including
+#  warranties of performance, merchantability or fitness for any particular
+#  purpose.
+#
+#  Please cite the author in any work or product based on this material.
+#
+# ===========================================================================
+
+# sra servers, old style
+# test directory structure:
+# data/rep01/
+#            ddbj01/SRR/000001/SRR002000/*
+#            ebi01/ERR/ERR033/ERR033753.csra, .lite.sra, .sra
+#            ebi01/ERR/ERR033753/*
+#            ebi01/ERR/ERR033753.csra, .lite.sra, .sra; ERR033754.kar
+#            ncbi01/SRR/000001/SRR001656/*
+#            ncbi01/SRR/000001/SRR001656.tar, .tar.gz
+#            refseq/SRR002274/*
+#            wgs/WGS/AA/QQ/AAQQ01/*
+#
+sra/servers         = "data/rep01"
+sra/ncbi/volumes    = "ncbi01"
+sra/ebi/volumes     = "ebi01"
+sra/ddbj/volumes    = "ddbj01"
+sra/wgs/volumes     = "wgs"
+
+refseq/servers      = "data/rep01"
+refseq/volumes      = "refseq"
+
+#
+# sra repository, new style (VDB-170)
+#
+# test directory structure (all these archives should be found):
+# data/srv1/
+#            ddbj1/SRR/000001/SRR002002/*              
+#            ddbj2/SRR/000001/SRR002003/*
+#            ebi1/ERR/ERR033/ERR033754/*
+#            ebi2/ERR/ERR033/ERR033755/*
+#            ncbi1/SRR/000001/SRR001657/*
+#            ncbi2/SRR/000001/SRR001658/*
+#            wgs1/WGS/AA/QQ/AAQQ02/*
+#            wgs2/WGS/AA/QQ/AAQQ03/*
+# data/srv2/
+#            ddbj2/SRR/000001/SRR002005/*
+#            ebi2/ERR/ERR033/ERR033756/*
+#            ncbi2/SRR/000001/SRR001659/*
+#            wgs2/WGS/AA/QQ/AAQQ04/*
+#            refseq/SRR002275/*
+
+sra/repository/trace1 = "nonexistent_server:data/srv1:data/rep01"
+sra/repository/trace1/ncbi/volumes  = "ncbi1:ncbi2"
+sra/repository/trace1/ebi/volumes   = "ebi1:ebi2"
+sra/repository/trace1/ddbj/volumes  = "ddbj1:ddbj2"
+
+sra/repository/trace2 = "data/srv2"
+sra/repository/trace2/ncbi/volumes  = "ncbi2"
+sra/repository/trace2/ebi/volumes   = "ebi2"
+sra/repository/trace2/ddbj/volumes  = "ddbj2"
+
+wgs/repository/wgs1             = "data/srv1"
+wgs/repository/wgs1/volumes     = "wgs:wgs1:wgs2"
+wgs/repository/wgs2             = "data/srv2"
+wgs/repository/wgs2/volumes     = "wgs2"
+
+refseq/repository/rs1           = "data/srv1"
+refseq/repository/rs1/volumes   = "refseq"
+refseq/repository/rs2           = "data/srv2"
+refseq/repository/rs2/volumes   = "refseq"
+

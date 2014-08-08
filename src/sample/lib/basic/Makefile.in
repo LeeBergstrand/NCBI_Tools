@@ -1,0 +1,10 @@
+# $Id: Makefile.in 163861 2009-06-19 16:08:28Z ucko $
+
+# Meta-makefile
+#################################
+
+LIB_PROJ = basic_sample_lib
+APP_PROJ = basic_sample_lib_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

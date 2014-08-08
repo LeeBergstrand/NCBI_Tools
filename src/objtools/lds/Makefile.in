@@ -1,0 +1,10 @@
+# $Id: Makefile.in 150837 2009-01-29 20:06:50Z vasilche $
+
+# Meta-makefile (lds)
+##################################
+
+LIB_PROJ = lds
+REQUIRES = bdb
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

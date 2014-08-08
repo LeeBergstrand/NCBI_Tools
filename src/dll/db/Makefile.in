@@ -1,0 +1,6 @@
+# $Id: Makefile.in 163327 2009-06-15 15:40:12Z ivanovp $
+
+SUB_PROJ = bdb
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

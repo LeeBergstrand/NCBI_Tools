@@ -1,0 +1,6 @@
+# $Id: Makefile.in 398297 2013-05-03 21:10:05Z rafanovi $
+
+APP_PROJ = biosample_chk
+srcdir = @srcdir@
+
+include @builddir@/Makefile.meta

@@ -1,0 +1,11 @@
+# $Id: Makefile.in 109368 2007-08-23 19:39:51Z ucko $
+
+# Miscellaneous objmgr applications
+#################################
+
+REQUIRES = objects
+
+SUB_PROJ = demo split_demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

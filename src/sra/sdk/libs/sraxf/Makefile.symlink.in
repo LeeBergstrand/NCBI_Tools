@@ -1,0 +1,29 @@
+# $Id: Makefile.symlink.in 16076 2013-05-19 02:07:57Z ucko $
+
+include $(builddir)/Makefile.mk
+
+dll_ext = @dll_ext@
+
+ALL = $(libdir)/ncbi/mod/libsraxf$(dll_ext) \
+      $(libdir)/ncbi/wmod/libwsraxf$(dll_ext) 
+
+all: $(ALL)
+
+$(libdir)/ncbi/mod/libsraxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/mod && \
+	  cd $(libdir)/ncbi/mod && \
+	  $(LN_S) ../../libsraxf$(DLL)$(dll_ext) libsraxf$(dll_ext) ; \
+	fi
+
+$(libdir)/ncbi/wmod/libwsraxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/wmod && \
+	  cd $(libdir)/ncbi/wmod && \
+	  $(LN_S) ../../libwsraxf$(DLL)$(dll_ext) libwsraxf$(dll_ext) ; \
+	fi
+
+clean:;
+
+purge:
+	-$(RM) $(ALL)

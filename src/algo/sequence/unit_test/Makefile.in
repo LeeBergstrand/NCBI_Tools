@@ -1,0 +1,7 @@
+# $Id: Makefile.in 254642 2011-02-16 16:42:17Z mozese2 $
+
+APP_PROJ = unit_test_gene_model unit_test_polya
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

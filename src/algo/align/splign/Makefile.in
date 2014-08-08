@@ -1,0 +1,9 @@
+# $Id: Makefile.in 140602 2008-09-18 18:12:24Z vakatov $
+
+# Meta-makefile (algo/align/splign)
+#################################
+
+LIB_PROJ = xalgoalignsplign
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

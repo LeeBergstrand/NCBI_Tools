@@ -1,0 +1,6 @@
+# $Id: Makefile.in 373656 2012-08-31 15:16:14Z mcelhany $
+
+APP_PROJ = dbapi_simple dbapi_advanced_features db_copy
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

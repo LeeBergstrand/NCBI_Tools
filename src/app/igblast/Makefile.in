@@ -1,0 +1,8 @@
+# $Id: Makefile.in 375099 2012-09-17 16:06:43Z vakatov $
+
+APP_PROJ = igblastp igblastn
+
+REQUIRES = objects algo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

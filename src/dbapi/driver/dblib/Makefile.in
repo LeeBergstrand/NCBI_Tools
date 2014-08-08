@@ -1,0 +1,7 @@
+# $Id: Makefile.in 70962 2005-10-18 10:46:48Z ssikorsk $
+
+LIB_PROJ = ncbi_xdbapi_dblib
+SUB_PROJ = samples
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

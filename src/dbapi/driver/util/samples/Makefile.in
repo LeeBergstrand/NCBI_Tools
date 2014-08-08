@@ -1,0 +1,6 @@
+# $Id: Makefile.in 48856 2004-10-19 17:59:53Z ivanovsk $
+
+APP_PROJ = blobrwd blobrws
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

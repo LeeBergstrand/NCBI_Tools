@@ -1,0 +1,6 @@
+# $Id: Makefile.in 374074 2012-09-05 20:34:51Z vasilche $
+
+EXPENDABLE_APP_PROJ = test_wgs_loader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

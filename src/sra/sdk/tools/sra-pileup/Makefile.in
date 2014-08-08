@@ -1,0 +1,7 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+APP_PROJ = sra-pileup sam-dump
+# sam-dump2
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

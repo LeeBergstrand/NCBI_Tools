@@ -1,0 +1,9 @@
+# $Id: Makefile.in 87009 2006-07-31 18:31:45Z ucko $
+#
+# FreeTDS CTLIB library
+
+LIB_PROJ = ctlib64
+
+srcdir = @srcdir@
+
+include @builddir@/Makefile.meta

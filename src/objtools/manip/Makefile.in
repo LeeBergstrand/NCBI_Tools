@@ -1,0 +1,9 @@
+# $Id: Makefile.in 28286 2003-10-02 18:21:21Z dicuccio $
+
+# Meta-makefile ("objtools/manip" project)
+############################################
+
+LIB_PROJ = xobjmanip
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

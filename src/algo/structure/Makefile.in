@@ -1,0 +1,9 @@
+# $Id: Makefile.in 128326 2008-05-21 15:57:16Z thiessen $
+
+# Meta-makefile("algo/structure" projects)
+#################################
+
+SUB_PROJ = struct_dp struct_util cd_utils wx_tools bma_refine threader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 185303 2010-03-10 17:06:00Z mcelhany $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = objmgr_sample bioseq_edit_sample feattree_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

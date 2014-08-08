@@ -1,0 +1,8 @@
+#################################
+# $Id: Makefile.in 197195 2010-07-14 16:15:14Z grichenk $
+#################################
+
+DLL_PROJ = ncbi_xloader_lds2
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,6 @@
+# $Id: Makefile.in 119744 2008-02-13 19:55:03Z vakatov $
+
+APP_PROJ = speedtest
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

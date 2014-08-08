@@ -1,0 +1,27 @@
+# $Id: Makefile.sources 16076 2013-05-19 02:07:57Z ucko $
+
+all source: check-sra-schema
+
+include $(builddir)/Makefile.mk
+
+clean purge:
+	-$(RMDIR) expected
+
+check-sra-schema:
+# The use of "command" works around Solaris's /bin/sh's lack of support for -nt.
+	@if [ -x $(bindir)/sra-dflt-schema ] && \
+	   command [ $(bindir)/sra-dflt-schema -nt $(srcdir)/sra-schema.c ]; \
+	then \
+	    echo "Comparing sra-schema.c with sra-dflt-schema output." ; \
+	    LD_LIBRARY_PATH=$(libdir) ; \
+	    DYLD_LIBRARY_PATH=$(libdir) ; \
+	    export LD_LIBRARY_PATH DYLD_LIBRARY_PATH ; \
+	    mkdir -p expected ; \
+	    cd expected  &&  \
+	    if $(bindir)/sra-dflt-schema -osra-schema.c \
+	      -I$(srcdir)/../../interfaces $(srcdir)/built-in.vschema ; then \
+	        cmp sra-schema.c $(srcdir)/sra-schema.c ; \
+	    else \
+	        echo "WARNING: sra-dflt-schema failed with error $?." ; \
+	    fi ; \
+	fi

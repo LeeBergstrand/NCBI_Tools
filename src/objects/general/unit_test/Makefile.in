@@ -1,0 +1,9 @@
+# $Id: Makefile.in 210310 2010-11-03 13:04:33Z whlavina $
+
+APP_PROJ = unit_test_field_collection
+PROJ_TAG = test
+
+REQUIRES = Boost.Test.Included objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 39321 2004-05-04 14:44:22Z kuznets $
+
+# Meta-makefile ("hello" program)
+#################################
+
+APP_PROJ = hello fasthello
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

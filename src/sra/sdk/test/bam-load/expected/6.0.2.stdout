@@ -1,0 +1,119 @@
+     ALIGNMENT_COUNT: 1
+          BASE_COUNT: 51
+      BIO_BASE_COUNT: 51
+      CMP_BASE_COUNT: 0
+            CMP_READ: 
+        COLOR_MATRIX: 0, 1, 2, 3, 4, 1, 0, 3, 2, 4, 2, 3, 0, 1, 4, 3, 2, 1, 0, 4, 4, 4, 4, 4, 4
+              CSREAD: 323201020100233322210132122113012021012232021030023
+              CS_KEY: T
+           CS_NATIVE: false
+      FIXED_SPOT_LEN: 0
+         MAX_SPOT_ID: 1
+         MIN_SPOT_ID: 1
+                NAME: 1
+            PLATFORM: SRA_PLATFORM_UNDEFINED
+PRIMARY_ALIGNMENT_ID: 1
+             QUALITY: 30, 30, 30, 30, 30, 30, 1, 30, 20, 30, 30, 30, 30, 30, 20, 10, 10, 1, 30, 1, 30, 1, 30, 10, 10, 10, 10, 1, 1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1, 1, 1, 1, 1, 10, 1
+           RD_FILTER: SRA_READ_FILTER_PASS
+                READ: AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGACCAGATCCTGGCCCTA
+         READ_FILTER: SRA_READ_FILTER_PASS
+            READ_LEN: 51
+            READ_SEG: [0, 51]
+          READ_START: 0
+           READ_TYPE: SRA_READ_TYPE_BIOLOGICAL|SRA_READ_TYPE_FORWARD
+          SIGNAL_LEN: 0
+          SPOT_COUNT: 1
+          SPOT_GROUP: SRR006423
+             SPOT_ID: 1
+            SPOT_LEN: 51
+          TMP_KEY_ID: 0
+            TRIM_LEN: 51
+          TRIM_START: 0
+
+================================== PRIMARY_ALIGNMENT ==================================
+            ALIGN_GROUP: 
+               ALIGN_ID: 1
+             BASE_COUNT: 51
+         BIO_BASE_COUNT: 51
+             CIGAR_LONG: 35=16S
+         CIGAR_LONG_LEN: 6
+            CIGAR_SHORT: 35M16S
+        CIGAR_SHORT_LEN: 6
+     CLIPPED_CIGAR_LONG: 35=
+ CLIPPED_CIGAR_LONG_LEN: 3
+    CLIPPED_CIGAR_SHORT: 35M
+CLIPPED_CIGAR_SHORT_LEN: 3
+   CLIPPED_HAS_MISMATCH: 00000000000000000000000000000000000
+ CLIPPED_HAS_REF_OFFSET: 00000000000000000000000000000000000
+       CLIPPED_MISMATCH: 
+        CLIPPED_QUALITY: 30, 30, 30, 30, 30, 30, 1, 30, 20, 30, 30, 30, 30, 30, 20, 10, 10, 1, 30, 1, 30, 1, 30, 10, 10, 10, 10, 1, 1, 1, 1, 1, 10, 10, 1
+           CLIPPED_READ: AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGA
+     CLIPPED_REF_OFFSET: 
+         CMP_BASE_COUNT: 51
+           COLOR_MATRIX: 0, 1, 2, 3, 4, 1, 0, 3, 2, 4, 2, 3, 0, 1, 4, 3, 2, 1, 0, 4, 4, 4, 4, 4, 4
+                 CS_KEY: T
+              CS_NATIVE: false
+          EDIT_DISTANCE: 0
+       GLOBAL_REF_START: 60024
+           HAS_MISMATCH: 000000000000000000000000000000000000000000000000000
+         HAS_REF_OFFSET: 000000000000000000000000000000000000000000000000000
+                  LABEL: ploidy1
+              LABEL_LEN: 7
+            LABEL_START: 0
+         LEFT_SOFT_CLIP: 0
+                   MAPQ: 60
+          MATE_ALIGN_ID: 
+        MATE_CIGAR_LONG: 
+    MATE_CIGAR_LONG_LEN: 
+       MATE_CIGAR_SHORT: 
+   MATE_CIGAR_SHORT_LEN: 
+     MATE_EDIT_DISTANCE: 
+            MATE_REF_ID: 
+           MATE_REF_LEN: 
+          MATE_REF_NAME: 
+   MATE_REF_ORIENTATION: 
+           MATE_REF_POS: 
+        MATE_REF_SEQ_ID: 
+            MAX_SPOT_ID: 1
+            MIN_SPOT_ID: 1
+               MISMATCH: 
+          MISMATCH_READ: ===================================================
+                   NAME: 1
+               PLATFORM: SRA_PLATFORM_UNDEFINED
+                QUALITY: 30, 30, 30, 30, 30, 30, 1, 30, 20, 30, 30, 30, 30, 30, 20, 10, 10, 1, 30, 1, 30, 1, 30, 10, 10, 10, 10, 1, 1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1, 1, 1, 1, 1, 10, 1
+               RAW_READ: AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGACCAGATCCTGGCCCTA
+              RD_FILTER: SRA_READ_FILTER_PASS
+                   READ: AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGACCAGATCCTGGCCCTA
+            READ_FILTER: SRA_READ_FILTER_PASS
+               READ_LEN: 51
+             READ_START: 0
+              READ_TYPE: SRA_READ_TYPE_BIOLOGICAL|SRA_READ_TYPE_FORWARD
+             REF_DELETE: 00000000000000000000000000000000000
+                 REF_ID: 13
+             REF_INSERT: 00000000000000000000000000000000000
+                REF_LEN: 35
+           REF_MISMATCH: 00000000000000000000000000000000000
+               REF_NAME: 20
+             REF_OFFSET: 
+        REF_ORIENTATION: false
+                REF_POS: 60024
+               REF_READ: AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGA
+             REF_SEQ_ID: CM000682.1
+              REF_START: 24
+              REF_TABLE: REFERENCE
+        RIGHT_SOFT_CLIP: 16
+              SAM_FLAGS: 0
+            SAM_QUALITY: ??????"?5?????5++"?"?"?++++"""""++""""""+""""""""+"
+               SEQ_NAME: 1
+            SEQ_READ_ID: 1
+         SEQ_SPOT_GROUP: SRR006423
+            SEQ_SPOT_ID: 1
+             SPOT_COUNT: 1
+             SPOT_GROUP: SRR006423
+                SPOT_ID: 1
+               SPOT_LEN: 51
+           TEMPLATE_LEN: 0
+             TMP_KEY_ID: 0, 0
+               TRIM_LEN: 51
+             TRIM_START: 0
+

@@ -1,0 +1,29 @@
+# $Id: Makefile.symlink.in 14717 2013-03-08 15:25:05Z ucko $
+
+include $(builddir)/Makefile.mk
+
+dll_ext = @dll_ext@
+
+ALL = $(libdir)/ncbi/mod/libwgsxf$(dll_ext) \
+      $(libdir)/ncbi/wmod/libwwgsxf$(dll_ext) 
+
+all: $(ALL)
+
+$(libdir)/ncbi/mod/libwgsxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/mod && \
+	  cd $(libdir)/ncbi/mod && \
+	  $(LN_S) ../../libwgsxf$(DLL)$(dll_ext) libwgsxf$(dll_ext) ; \
+	fi
+
+$(libdir)/ncbi/wmod/libwwgsxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/wmod && \
+	  cd $(libdir)/ncbi/wmod && \
+	  $(LN_S) ../../libwwgsxf$(DLL)$(dll_ext) libwwgsxf$(dll_ext) ; \
+	fi
+
+clean:;
+
+purge:
+	-$(RM) $(ALL)

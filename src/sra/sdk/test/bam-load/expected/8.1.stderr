@@ -1,0 +1,2 @@
+2012-11-26T22:11:15 bam-load.2.2.1 warn: libs/kdb/wkdb.c:KDBVDrop:1197: path not found while removing directory within database module - table PRIMARY_ALIGNMENT failed to drop temporary column 'TMP_KEY_ID'
+2012-11-26T22:11:15 bam-load.2.2.1 warn: libs/kdb/wkdb.c:KDBVDrop:1197: path not found while removing directory within database module - table SEQUENCE failed to drop temporary column 'TMP_KEY_ID'

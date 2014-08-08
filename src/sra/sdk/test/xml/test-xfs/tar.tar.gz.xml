@@ -1,0 +1,13 @@
+<ROOT version="1.0.8">
+  <container id="1" path="tar.tar.gz" name="tar.tar.gz" mtime="2011-03-07T21:13:57Z" filetype="Compressed/GnuZip" md5="3f892cbd622bd98362f2ba46a64dc5a8" crc32="1acc3cb1" size="290">
+    <archive id="2" path="tar.tar.gz/tar.tar" name="tar.tar" mtime="2011-03-07T21:13:57Z" filetype="Archive/TapeArchive" md5="a9858f6739105b72c08b848666626401" size="10240">
+      <directory name="tar" mtime="2011-03-07T21:12:36Z">
+        <archive id="3" path="tar.tar.gz/tar.tar/tar/kar.sra" name="kar.sra" mtime="2011-03-07T21:11:43Z" filetype="Archive/ShortReadArchive" md5="bf8fccc97eee1ac5500a538485dee889" offset="1024" size="116">
+          <container id="4" path="tar.tar.gz/tar.tar/tar/kar.sra/a.bz2" name="a.bz2" mtime="2011-03-07T21:10:17Z" filetype="Compressed/Bzip" md5="c2fdee83336659976c3f3b77f1dc330e" offset="72" size="44">
+            <file id="5" path="tar.tar.gz/tar.tar/tar/kar.sra/a.bz2/a" name="a" mtime="2011-03-07T21:10:17Z" filetype="Unknown/Unknown" md5="8454d364d4ac118bf4bdae7f9df572a5" size="54"/>
+          </container>
+        </archive>
+      </directory>
+    </archive>
+  </container>
+</ROOT>

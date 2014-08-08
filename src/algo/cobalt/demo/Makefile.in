@@ -1,0 +1,10 @@
+# $Id: Makefile.in 197305 2010-07-15 15:13:01Z boratyng $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+APP_PROJ = cobalt clusterer
+PROJ_TAG = demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

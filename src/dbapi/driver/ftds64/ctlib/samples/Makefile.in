@@ -1,0 +1,6 @@
+# $Id: Makefile.in 93116 2006-11-07 16:57:41Z ssikorsk $
+
+APP_PROJ = ctl_sp_who_ftds64 ctl_lang_ftds64
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

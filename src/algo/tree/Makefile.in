@@ -1,0 +1,10 @@
+# $Id: Makefile.in 43880 2004-07-21 18:20:45Z kuznets $
+
+# Meta-makefile("ALGO/tree" project)
+#################################
+
+SUB_PROJ = test
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

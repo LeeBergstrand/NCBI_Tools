@@ -1,0 +1,8 @@
+# $Id: Makefile.in 50560 2004-11-17 19:45:30Z gouriano $
+#################################
+
+APP_PROJ = soap_client_sample
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

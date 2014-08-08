@@ -1,0 +1,11 @@
+# $Id: Makefile.in 109127 2007-08-20 18:16:15Z kapustin $
+
+# Meta-makefile (algo/align/nw)
+#################################
+
+LIB_PROJ = xalgoalignnw
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 363247 2012-05-15 16:11:02Z mcelhany $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = basic_sample multi_command
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 120300 2008-02-21 15:33:20Z thiessen $
+#################################
+
+
+LIB_PROJ = xbma_refiner xbma_refiner_gui
+SUB_PROJ = bma_refiner_app
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

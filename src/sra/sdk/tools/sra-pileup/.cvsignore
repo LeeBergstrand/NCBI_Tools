@@ -1,0 +1,6 @@
+.cvsignore
+*.vers.h
+*.txt
+*.sh
+sam-dump-anton.c
+sam-dump-new.c

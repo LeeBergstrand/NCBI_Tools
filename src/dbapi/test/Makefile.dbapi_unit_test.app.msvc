@@ -1,0 +1,4 @@
+; $Id: Makefile.dbapi_unit_test.app.msvc 201539 2010-08-19 11:19:54Z ivanovp $
+
+[UsePch]
+DefaultPch = dbapi_unit_test_pch.hpp

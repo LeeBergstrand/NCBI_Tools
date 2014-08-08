@@ -1,0 +1,9 @@
+# $Id: Makefile.in 108294 2007-08-06 17:29:58Z Gouriano $
+
+SUB_PROJ =  \
+    ncbi_xblobstorage_netcache \
+    ncbi_xcache_netcache \
+    xconnext
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

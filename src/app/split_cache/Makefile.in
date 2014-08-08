@@ -1,0 +1,9 @@
+# $Id: Makefile.in 32768 2004-01-13 16:55:58Z vasilche $
+
+# Meta-makefile("CACHE" project)
+#################################
+
+APP_PROJ = split_cache
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

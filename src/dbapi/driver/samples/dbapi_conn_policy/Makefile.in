@@ -1,0 +1,6 @@
+# $Id: Makefile.in 75087 2006-01-04 13:11:42Z ssikorsk $
+
+APP_PROJ = dbapi_conn_policy
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

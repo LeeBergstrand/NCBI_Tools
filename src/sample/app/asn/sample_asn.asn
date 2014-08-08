@@ -1,0 +1,26 @@
+-- $Id: sample_asn.asn 99676 2007-03-05 20:41:55Z kazimird $
+-- By D. Vakatov, NCBI
+--
+-- A very simple ASN.1 spec for demo purposes only
+
+
+NCBI-Sample-ASN  DEFINITIONS ::=
+
+BEGIN
+
+IMPORTS Date, Object-id FROM NCBI-General;
+
+
+--
+-- Some simple type
+--
+
+NCBI-Sample-ASN-Type  ::= SEQUENCE {
+    date    Date,
+    id      Object-id,
+    name    VisibleString OPTIONAL,
+    tag     INTEGER DEFAULT 999
+}
+
+
+END

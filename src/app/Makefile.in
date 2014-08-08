@@ -1,0 +1,19 @@
+# $Id: Makefile.in 400119 2013-05-17 20:20:03Z rafanovi $
+
+# Miscellaneous applications
+#################################
+
+SUB_PROJ = asn2asn asn2fasta asn2flat asnval id1_fetch blast convert_seq \
+           nmer_repeats objmgr gi2taxid netschedule grid igblast \
+           winmasker dustmasker segmasker blastdb vecscreen \
+           agpconvert id2_fetch agp_validate objextract lds_indexer \
+           bdb_env_keeper nw_aligner speedtest idmapper formatguess \
+           multireader read_blast_result splign hfilter \
+           annotwriter compart streamtest lds2_indexer discrep_report biosample_chk
+
+EXPENDABLE_SUB_PROJ = split_cache wig2table netcache rmblastn
+
+REQUIRES = app
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

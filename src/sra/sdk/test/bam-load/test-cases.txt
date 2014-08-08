@@ -1,0 +1,72 @@
+
+1.0 Paired primary alignment 
+1.0.1 with flag 0x1 clear (result: spot assembly not done)
+1.0.2 with flag 0x2 clear (result as 1.0)
+
+2.0 Paired primary alignment plus secondary alignment
+2.0.1 with flag 0x1 clear (result: spot assembly not done)
+2.0.2 with flag 0x2 clear (result as 1.0)
+2.1 Paired primary alignment plus multiple secondary alignments
+2.1.1 with flag 0x1 clear (result: spot assembly not done)
+2.1.2 with flag 0x2 clear (result as 1.0)
+2.2 Good primary alignment, no matches on the secondary
+2.2.1 with flag 0x1 clear (result: spot assembly not done)
+2.2.2 with flag 0x2 clear (result as 1.0)
+
+2.3 Good primary alignment, bad position on the secondary
+2.3.1 with flag 0x1 clear (result: spot assembly not done)
+2.3.2 with flag 0x2 clear (result as 1.0)
+
+3.0 Half aligned pair (one read aligned, one isn't)
+3.0.1. Half aligned pair (one read aligned, one isn't), paired with flag 0x1 clear (result: spot assembly not done)
+3.1. Half aligned, half poorly aligned (no matches)
+3.1.1. Half aligned, half poorly aligned (no matches), paired with flag 0x1 clear (result: spot assembly not done)
+3.2. Half aligned, half poorly aligned (bad position)
+3.2.1. Half aligned, half poorly aligned (bad position), paired with flag 0x1 clear (result: spot assembly not done)
+
+4.0 Unaligned pair
+4.0.1 Unaligned pair, with flag 0x1 clear (result: spot assembly not done) 
+4.1. Badly aligned, unaligned pair
+
+5.0 Unaligned no pair
+5.1. Badly aligned, no pair
+
+6.0 Aligned, no pair
+
+7.0 Aligned, no pair with secondary, no pair
+
+=====
+
+x.x.2 with bad flags:
+- paired, aligned, 0x2 clear (not checking it; make sure we are not screwed up - ? verify)
+
+
+- paired, aligned with 0x8 clear (not checking it; make sure we are not screwed up)
+- 0x20 is set but mate's 0x10 not (not checking it; make sure we are not screwed up)
+- a mated record with both 0x40 and 0x80 set 
+- a mated record with both 0x40 and 0x80 clear
+- multiple alignments for the same spot, none of which are marked secondary (0x100)
+- 0x200 set (set READ_FILTER column = REJECT)
+- 0x400 set (set READ_FILTER column = CRITERIA, only if set on both mates)
+- both 0x200 and 0x400 set on both of reads in a pair (result: warning, only one of the flags set)
+
+RNAME = *, flag says it's aligned
+
+CIGAR = *, flag says aligned
+
+CIGAR contains hard clipping (H operations)
+
+1.* with varying spot groups
+
+SEQ = * (SAM allows, no sense for us - error)
+QUAL = * (same)
+
+Poorly aligned: 
+	- good position, no matches (result: made unaligned)
+	- bad position (=beyond the end of the reference) (result: made unaligned)
+
+Error(warning?): Primary aligned unpaired, secondary paired
+
+TBD: colorspace tests
+
+TBD: header tests

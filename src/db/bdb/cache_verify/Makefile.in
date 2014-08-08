@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 45538 2004-08-18 16:14:09Z kuznets $
+# Author:  Anatoliy Kuznetsov (kuznets@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile -- BDB cache verify
+#################################
+
+APP_PROJ = bdb_cverify
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

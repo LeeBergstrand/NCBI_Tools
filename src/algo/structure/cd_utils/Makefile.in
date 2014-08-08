@@ -1,0 +1,7 @@
+# $Id: Makefile.in 109717 2007-08-30 15:48:53Z lanczyck $
+#################################
+
+LIB_PROJ = xcd_utils
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

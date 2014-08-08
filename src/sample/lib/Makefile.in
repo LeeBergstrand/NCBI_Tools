@@ -1,0 +1,6 @@
+# $Id: Makefile.in 163861 2009-06-19 16:08:28Z ucko $
+
+SUB_PROJ = basic asn_lib dtd xsd
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

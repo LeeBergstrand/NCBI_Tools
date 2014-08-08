@@ -1,0 +1,11 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+USR_PROJ = preclean
+
+APP_PROJ = test-sysfs test-buffile ktartest test-pagefile \
+           test-kpath-read-path test-bzip-concat test-sysfile-timeout \
+           test-headfile test-kfsmanager test-kfs test-ramfile test-resolve \
+           test-sparse
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

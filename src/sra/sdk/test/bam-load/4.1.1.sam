@@ -1,0 +1,6 @@
+@CO	Badly aligned, unaligned pair, with flag 0x1 clear (result: spot assembly not done)
+@CO	-----------------------------------------------------
+@HD	VN:1.0	GO:none	SO:coordinate
+@SQ	SN:20	LN:63025520	AS:NCBI37	
+SRR006423.6228848	98	20	63025521	60	35M16S	=	60079	89	AGCTTGGAACCCTATAGAGTTGCTGAGTGCCAGGACCAGATCCTGGCCCTA	=;>@?;%=<>@AC@B79,>2C4B;7877%7%58:6%96.%8#$%//.%2:%	XC:i:35	XT:A:U	NM:i:0	SM:i:37	AM:i:37	X0:i:1	X1:i:0	XM:i:0	XO:i:0	XG:i:0	MD:Z:35	RG:Z:SRR006423	OQ:Z:IIIIII%I<EFIGD>-4&I(B*@++++)%)%'+0(%()&%+#$%&(&%&+&
+SRR006423.6228848	147	*	60079	60	16S35M	=	60025	-89	GATCCTGTCAAAAAACAGGTGGTAAGGAAGGAGAGAGTGAAGGCACTGCCA	%."%/#:#9#""9%7$3<A%%A<#:@$@>AA>=57:<5=$<5)%4<?-:=;	XC:i:35	XT:A:U	NM:i:1	SM:i:37	AM:i:37	X0:i:1	X1:i:0	XM:i:1	XO:i:0	XG:i:0	MD:Z:27A7	RG:Z:SRR006423	OQ:Z:%&"%&#)#,#""+%($&(-%%/,#*-$2-22.-**-2,3&2+&%/II+III

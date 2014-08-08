@@ -1,0 +1,8 @@
+# $Id: Makefile.in 330377 2011-08-11 16:16:32Z vakatov $
+
+SUB_PROJ            = third_party third_party_static clog grid_cgi xmlwrapp \
+                      hgvs
+EXPENDABLE_SUB_PROJ = cgi_redirect
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

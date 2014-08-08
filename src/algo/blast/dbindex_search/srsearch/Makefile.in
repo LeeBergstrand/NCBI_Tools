@@ -1,0 +1,9 @@
+# $Id: Makefile.in 140978 2008-09-23 12:48:49Z morgulis $
+
+# Meta-makefile("srsearch" project)
+#################################
+
+APP_PROJ = srsearch
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

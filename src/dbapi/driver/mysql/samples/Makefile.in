@@ -1,0 +1,6 @@
+# $Id: Makefile.in 13667 2002-08-13 20:23:14Z butanaev $
+
+APP_PROJ = mysql_lang
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

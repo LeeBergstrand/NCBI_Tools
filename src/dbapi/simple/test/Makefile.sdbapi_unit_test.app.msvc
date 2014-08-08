@@ -1,0 +1,4 @@
+; $Id: Makefile.sdbapi_unit_test.app.msvc 341842 2011-10-24 16:51:11Z ivanovp $
+
+[UsePch]
+DefaultPch = sdbapi_unit_test_pch.hpp

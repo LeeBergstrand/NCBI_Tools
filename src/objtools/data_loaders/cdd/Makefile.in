@@ -1,0 +1,9 @@
+# $Id: Makefile.in 44578 2004-08-02 17:34:44Z grichenk $
+
+# Meta-makefile (ncbi_xloader_cdd)
+##################################
+
+LIB_PROJ = ncbi_xloader_cdd
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

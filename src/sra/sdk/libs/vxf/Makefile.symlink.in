@@ -1,0 +1,37 @@
+# $Id: Makefile.symlink.in 16076 2013-05-19 02:07:57Z ucko $
+
+include $(builddir)/Makefile.mk
+
+dll_ext = @dll_ext@
+
+ALL = $(libdir)/ncbi/mod/libvxf$(dll_ext) \
+      $(libdir)/ncbi/mod/libvxfentrez$(dll_ext) \
+      $(libdir)/ncbi/wmod/libwvxf$(dll_ext) 
+
+all: $(ALL)
+
+$(libdir)/ncbi/mod/libvxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/mod && \
+	  cd $(libdir)/ncbi/mod && \
+	  $(LN_S) ../../libvxf$(DLL)$(dll_ext) libvxf$(dll_ext) ; \
+	fi
+
+$(libdir)/ncbi/mod/libvxfentrez$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . -a -f $(status_dir)/CURL.enabled ]; then \
+	  mkdir -p $(libdir)/ncbi/mod && \
+	  cd $(libdir)/ncbi/mod && \
+	  $(LN_S) ../../libvxfentrez$(DLL)$(dll_ext) libvxfentrez$(dll_ext) ; \
+	fi
+
+$(libdir)/ncbi/wmod/libwvxf$(dll_ext):
+	@-if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  mkdir -p $(libdir)/ncbi/wmod && \
+	  cd $(libdir)/ncbi/wmod && \
+	  $(LN_S) ../../libwvxf$(DLL)$(dll_ext) libwvxf$(dll_ext) ; \
+	fi
+
+clean:;
+
+purge:
+	-$(RM) $(ALL)

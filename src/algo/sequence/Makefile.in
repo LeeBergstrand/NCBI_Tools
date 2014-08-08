@@ -1,0 +1,13 @@
+# $Id: Makefile.in 168976 2009-08-24 12:49:42Z dicuccio $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+LIB_PROJ = xalgoseq
+
+SUB_PROJ = demo unit_test
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,6 @@
+# $Id: Makefile.in 172801 2009-10-08 18:33:55Z vasilche $
+
+APP_PROJ = wig2table
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,8 @@
+# $Id: Makefile.in 341539 2011-10-20 15:06:53Z ivanov $
+
+LIB_PROJ = 
+APP_PROJ = test_ncbi_clog_mt test_ncbi_clog_mt_ctx
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

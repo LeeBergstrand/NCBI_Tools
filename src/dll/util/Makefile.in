@@ -1,0 +1,8 @@
+# $Id: Makefile.in 108294 2007-08-06 17:29:58Z Gouriano $
+
+SUB_PROJ =  \
+    ncbi_image \
+    ncbi_xblobstorage_file
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

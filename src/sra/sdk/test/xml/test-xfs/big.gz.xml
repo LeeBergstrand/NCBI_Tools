@@ -1,0 +1,5 @@
+<ROOT version="1.0.10">
+  <container id="1" path="big.sff.gz" name="big.sff.gz" mtime="2011-03-17T20:02:20Z" filetype="Compressed/GnuZip" md5="ef982169992b40467eafd49a0b0a1226" crc32="085d1cbd" size="15301">
+    <file id="2" path="big.sff.gz/big.sff" name="big.sff" mtime="2011-03-17T20:02:20Z" filetype="Read/StandardFlowgramFormat" md5="f41873c23973a21c4db0bf9776f50c12" size="32768"/>
+  </container>
+</ROOT>

@@ -1,0 +1,4 @@
+# $Id: Makefile.preclean 14717 2013-03-08 15:25:05Z ucko $
+# Clean up test suite leftovers
+%:
+	-rm -f test-btree.c

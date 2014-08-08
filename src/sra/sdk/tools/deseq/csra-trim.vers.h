@@ -1,0 +1,1 @@
+#define CSRA_TRIM_VERS 0x02030001

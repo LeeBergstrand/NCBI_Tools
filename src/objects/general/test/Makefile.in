@@ -1,0 +1,7 @@
+# $Id: Makefile.in 387672 2013-01-31 15:20:48Z gouriano $
+
+APP_PROJ = test_date test_uoconv test_userfield
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,10 @@
+# $Id: Makefile.in 197195 2010-07-14 16:15:14Z grichenk $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = test_lds2
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

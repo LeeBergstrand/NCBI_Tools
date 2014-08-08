@@ -1,0 +1,6 @@
+@HD	VN:1.0	GO:none	SO:coordinate
+@SQ	SN:MT	LN:16569	AS:NCBI37	UR:file:/lustre/scratch102/projects/g1k/ref/main_project/human_g1k_v37.fasta	M5:c68f52674c9fb33aef52dcf399755519
+@PG	ID:GATK TableRecalibration	VN:v2.2.16	CL:Covariates=[ReadGroupCovariate, QualityScoreCovariate, DinucCovariate, CycleCovariate], use_original_quals=true, default_read_group=DefaultReadGroup, default_platform=Illumina, force_read_group=null, force_platform=null, solid_recal_mode=SET_Q_ZERO, window_size_nqs=5, homopolymer_nback=7, exception_if_no_tile=false, pQ=5, maxQ=40, smoothing=1
+1	0	MT	895	17	36M	*	0	0	CTCATCGGTCACACGATTAACCCAAGTCAATAGAAG	38;>7>9<=>@AAA;?AB>AACCAA???A@@<<;:5	RG:Z:SRR003486	NM:i:3
+2	1024	MT	3681	37	36M	*	0	0	AAACTACGCCCTGATCGGCGCACTGCGAGCAGTAGC	38:=:;?9?BB=B?A?;?A;AAA=BA;6>@@==988	RG:Z:SRR003486	NM:i:0
+3	0	MT	5001	37	1M1I29M	*	0	0	AGTCTTAGCATACTCCTCAATTACCCACATA	88:<??@<?AA?=?CAAAAA>A=8;47@B?<	RG:Z:SRR003486	NM:i:1

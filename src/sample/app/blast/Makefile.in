@@ -1,0 +1,8 @@
+# $Id: Makefile.in 189834 2010-04-26 13:36:34Z madden $
+
+REQUIRES = objects algo
+
+APP_PROJ = blast_sample blast_demo remote_blast_demo vsrun_sample
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,6 @@
+# $Id: Makefile.in 127726 2008-05-15 13:57:47Z ludwigf $
+
+APP_PROJ = multireader
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

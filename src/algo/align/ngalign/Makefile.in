@@ -1,0 +1,14 @@
+# $Id: Makefile.in 205886 2010-09-22 20:19:03Z ucko $
+
+# Meta-makefile (algo/align/ngalign)
+#################################
+
+LIB_PROJ = xngalign
+EXPENDABLE_SUB_PROJ = test
+
+REQUIRES = objects
+
+WATCHERS = boukn
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

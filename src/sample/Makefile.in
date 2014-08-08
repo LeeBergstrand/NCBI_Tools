@@ -1,0 +1,6 @@
+# $Id: Makefile.in 157249 2009-04-14 13:03:44Z gouriano $
+
+SUB_PROJ = app lib
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

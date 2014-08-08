@@ -1,0 +1,6 @@
+# $Id: Makefile.in 347044 2011-12-13 18:09:42Z ivanov $
+
+APP_PROJ = ncbi_applog 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

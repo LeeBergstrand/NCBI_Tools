@@ -1,0 +1,10 @@
+# $Id: Makefile.in 110315 2007-09-11 18:47:55Z ucko $
+#################################
+
+XSD_PROJ = soap_dataobj
+SUB_PROJ = server client
+
+REQUIRES = serial
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TAR xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="file:/P:/asm-trace/src/fuse/sra-fuser.xsd">
+   
+   <Item name="list" path="../ls.txt" size="697"/>
+   <Item path="../ls.txt" size="697"/>
+   <Item name="fastq-validator.pl" path="../fastq-validator.pl" size="907"/>
+   <Item name="fastq-validator-abs.pl" path="/home/golikov/work/tests/fuse/fastq-validator.pl" size="907"/>
+</TAR>
+

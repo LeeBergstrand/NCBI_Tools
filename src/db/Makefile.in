@@ -1,0 +1,13 @@
+#################################
+# $Id: Makefile.in 163327 2009-06-15 15:40:12Z ivanovp $
+# Author:  Pavel Ivanov (ivanovp@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile for db code
+#################################
+
+SUB_PROJ = sqlite bdb
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

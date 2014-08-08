@@ -1,0 +1,7 @@
+# $Id: Makefile.in 272727 2011-04-11 15:52:43Z gouriano $
+
+APP_PROJ = dbapi_cache_test
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+<ROOT version="1.0.14">
+  <directory name="compressed.tgz" mtime="2011-04-01T19:43:09Z">
+    <directory name="compressed.tar" mtime="2011-04-01T19:43:09Z">
+      <directory name="dir" mtime="2011-04-01T19:43:09Z">
+        <file id="3" path="compressed.tgz/compressed.tar/dir/file" name="file" mtime="2011-04-01T19:43:09Z" filetype="Unknown/Unknown" md5="edb398af75a241acdc34e93dbed1acb8" size="20"/>
+      </directory>
+    </directory>
+  </directory>
+</ROOT>

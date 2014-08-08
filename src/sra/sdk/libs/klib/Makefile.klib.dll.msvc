@@ -1,0 +1,5 @@
+[AddToProject]
+SourceFiles = sysalloc
+
+[Compiler]
+PreprocessorDefinitions = WINDOWS

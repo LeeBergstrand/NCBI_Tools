@@ -1,0 +1,6 @@
+*.vers.h
+actual
+temp
+run.sh
+cmdline.txt
+

@@ -1,0 +1,9 @@
+# $Id: Makefile.vxf.lib.unix 14717 2013-03-08 15:25:05Z ucko $
+
+# Adjust ICC flags to avoid problematic references to __svml_* functions.
+
+ifeq "$(COMPILER)-$(DEBUG_SFX)" "icc-Release"
+  ceil.o floor.o round.o trunc.o: %.o: $(srcdir)/%.c
+	$(CC_WRAPPER) $(CC) $(CFLAGS_ALL) -fno-builtin-$* -fno-builtin-$*f $< \
+	    -o $@ $(CC_FILTER)
+endif

@@ -1,0 +1,8 @@
+RHOST = ncbipc8123
+RPORT = 20100
+OS = win
+ARCH = i386
+RHOME = X:/sra-test/autobuild/
+LHOME = /panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/autobuild/
+COMP = vc++
+

@@ -1,0 +1,13 @@
+# $Id: Makefile.in 94358 2006-11-29 03:13:35Z vakatov $
+# By D.Vakatov, NCBI
+#
+# Demonstrate how to generate serialization code out of an arbitrary
+# ASN.1 spec, and then give an example of how to use this code 
+
+ASN_PROJ = sample_asn
+APP_PROJ = asn_sample
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

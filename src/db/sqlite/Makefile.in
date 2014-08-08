@@ -1,0 +1,9 @@
+# $Id: Makefile.in 163036 2009-06-11 16:16:17Z ivanovp $
+
+# Meta-makefile ("XMLWrapp" project)
+#################################
+
+LIB_PROJ = sqlitewrapp
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

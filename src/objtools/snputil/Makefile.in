@@ -1,0 +1,6 @@
+# $Id: Makefile.in 214878 2010-12-08 17:08:29Z vakatov $
+
+LIB_PROJ = snputil
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

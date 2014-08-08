@@ -1,0 +1,8 @@
+.cvsignore
+curl-fetch.vers.h
+template
+*.txt
+dest.ftp
+*.cache
+*.bin
+*.sra

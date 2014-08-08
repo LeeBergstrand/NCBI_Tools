@@ -1,0 +1,9 @@
+# $Id: Makefile.in 96652 2007-01-10 16:14:01Z kuznets $
+
+# Meta-makefile ("query parser" project)
+#################################
+
+LIB_PROJ = xqueryparse
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

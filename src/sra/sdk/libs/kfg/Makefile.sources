@@ -1,0 +1,21 @@
+all source: check-grammar
+
+include $(builddir)/Makefile.mk
+
+clean purge:
+	-$(RMDIR) expected
+
+check-grammar: expected/config-grammar.c expected/config-tokens.h \
+               expected/config-lex.c
+	cmp expected/config-grammar.c $(srcdir)/config-grammar.c
+	cmp expected/config-tokens.h  $(srcdir)/config-tokens.h
+#	cmp expected/config-lex.c     $(srcdir)/config-lex.c
+	grep -v '^#line' expected/config-lex.c | cmp - $(srcdir)/config-lex.c
+
+expected/config-grammar.c expected/config-tokens.h: $(srcdir)/config-grammar.y
+	mkdir -p expected
+	bison -l -o expected/config-grammar.c \
+	    --defines=expected/config-tokens.h $<
+
+expected/config-lex.c: $(srcdir)/config-lex.l
+	flex -L -t $< > $@

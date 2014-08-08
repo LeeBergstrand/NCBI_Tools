@@ -1,0 +1,6 @@
+# $Id: Makefile.in 86583 2006-07-24 15:03:42Z vakatov $
+
+APP_PROJ = asn_cleanup
+srcdir = @srcdir@
+
+include @builddir@/Makefile.meta

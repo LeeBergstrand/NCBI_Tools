@@ -1,0 +1,6 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+APP_PROJ = test-srapath fd-leak
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

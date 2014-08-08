@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FUSE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:/P:\asm-trace\v2\src\services\fuse/sra-fuser.xsd">
+    <!-- all text nodes are ignored -->
+        
+    <Directory name="md5">
+        <SRA accession="SRR036971" />
+        <SRA accession="SRR036978" />
+        <SRA accession="SRR036982" />
+        <SRA accession="SRR036989" />
+        <SRA accession="SRR037013" />
+        <SRA accession="SRR037031" />
+        <SRA accession="SRR037032" />
+        <SRA accession="SRR037033" 
+             timestamp="2012-01-01T12:30:45" size.sra="12312312" md5.sra="161dcff775546383c8d87a05ce473897"
+                      size.lite.sra="45666" md5.lite.sra="788b956e2b897afb6d2dcfd30b568653" />
+    </Directory>
+    
+    
+    <Directory name="Direct" path="/net/snowman/vol/export2/dweb_priv/staff/golikov" />
+    <Directory name="EmptyLink" path="/home/golikov/work/web" />
+    <Directory name="SRR027555.direct" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/indexed/SRR/000026/SRR027555" />
+    <Directory name="NotEmptyLink" path="/home/golikov/work/web" >
+        <Directory name="xsl">
+            <File name="LinkFile" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/fuse-dir.xml" />
+            <File name="PlainFile" path="./fuse-dir.xml" />
+            <SRA accession="SRR001334" />
+            <SRA accession="SRR027555" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/indexed/SRR/000026/SRR027555"/>
+            <SRA accession="SRR035305" path="/panfs/pan1/trace-flatten/klymenka/sra-makeidx/SRR035305"/>
+            <SRA accession="SRR038603" />
+            <SRA accession="SRR037032" />
+            <Directory name="ts2002-10-21-20-00-00" timestamp="2002-10-21T20:00:00" path="/home/golikov/work/fuse-2.5.3" />
+        </Directory>
+    </Directory>
+    <Directory name="EmptyDir"  timestamp="2020-10-21T20:00:00"/>
+    <File name="SomeFile" path="ls.txt" />
+    <File name="LinkFile" path="fuse-dir.xml" />
+    <File name="FIFOFile" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/fifo" />
+    <File name="FIFOLink" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/fifo.lnk" />
+    <Directory name="KarRuns">
+  	   <SRA accession="SRR027555" path="SRR027555.sra" />
+  	   <SRA accession="SRR027555l" path="SRR027555.lite.sra" />
+  	   <Directory name="KarRunsDup">
+  	     <SRA accession="SRR027555" path="SRR027555.sra" />
+  	     <SRA accession="SRR027555x" path="SRR027555.lite.sra" />
+  	   </Directory>
+    </Directory>
+    <Directory name="tar-auto" path="tar-test">
+    </Directory>
+    
+    <Directory name="dir-w-tar1">
+    <Directory name="dir-w-tar2">
+    <Directory name="dir-w-tar3">
+    <Directory name="dir-w-tar4">
+    <TAR name="inline.tar">
+        <Item name="list" path="ls.txt" size="697" timestamp="1980-01-31T20:22:03"/>
+        <Item path="ls.txt" size="697" executable="false" />
+        <Item name="fastq-validator.pl" path="fastq-validator.pl" size="907" executable="true" />
+        <Item name="fastq-validator-abs.pl" path="/panfs/pan1.be-md.ncbi.nlm.nih.gov/sra-test/golikov/fuse/fastq-validator.pl" size="907" executable="true"/>
+
+<Item size ="71999284" path="tar-files/eclipse-cpp-ganymede-SR2-win32.zip" />
+<Item size ="145997460" path="tar-files/eclipse-php-galileo-win32.zip" />
+<Item size ="126641337" path="tar-files/mysql-noinstall-5.1.37-win32.zip" />
+<Item size ="51459616" path="tar-files/xampplite-win32-1.7.1.zip" />
+
+
+    </TAR>
+    </Directory>
+    </Directory>
+    </Directory>
+    </Directory>
+</FUSE>

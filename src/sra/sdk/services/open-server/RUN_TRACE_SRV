@@ -1,0 +1,42 @@
+#!/bin/sh                                                                                                                                                                                                                                                                                                   
+#close unused file descriptors                                                                                                                                                                                                                                                                              
+
+SYBASE_VER=current64
+
+SYBASE=/export/home/sybase/clients/$SYBASE_VER;export SYBASE
+LD_LIBRARY_PATH=$SYBASE/lib;export LD_LIBRARY_PATH
+
+INSTALLDIR=/sra/TRACE_SRV
+CMDNAME=$INSTALLDIR/TraceSrv
+
+OS_SUFFIX=I0
+
+ulimit -c 4194303
+_date=`/bin/date +"%Y-%m-%d.%H:%M:%S"`
+_proc=TraceOS
+_log=TRACE_SRV_${OS_SUFFIX}.log
+_grep=/bin/grep
+_ipcs='/usr/bin/ipcs -s'
+
+#ulimit -c 0                                                                                                                                                                                                                                                                                                
+ulimit -s 512
+#ulimit -n 1024                                                                                                                                                                                                                                                                                             
+#ulimit -u 2000                                                                                                                                                                                                                                                                                             
+
+SRVNAME=TRACE_SRV_${OS_SUFFIX}
+PRIMARYIQ=LINX2:foo=anyone,allowed
+SECONDARYIQ=LINX2_R1:foo=anyone,allowed
+NUMIQCONN=10
+TRACEASE=TRACE_UPDATE:TraceMain=anyone,allowed
+NUMASECONN=20
+#DEBUGLVL='-d 100'
+#PACKETSZ='-p 3584'                                                                                                                                                                                                                                                                                         
+MAXUSERS=200
+LOG_GET_TRACE_DATA=-l
+
+cd $INSTALLDIR
+$CMDNAME -S ${SRVNAME} -h ${PRIMARYIQ} -s ${SECONDARYIQ}  -c ${NUMIQCONN} \
+    -t ${TRACEASE} -n ${NUMASECONN} ${DEBUGLVL} ${PACKETSZ} -u ${MAXUSERS} \
+    ${LOG_GET_TRACE_DATA} >> stdout 2>&1 </dev/null &
+
+exit 0

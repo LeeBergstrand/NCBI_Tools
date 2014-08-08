@@ -1,0 +1,4 @@
+; $Id: Makefile.ctlib64.lib.msvc 341844 2011-10-24 16:52:01Z ivanovp $
+
+[AddToProject]
+HeadersInInclude = ../*.h

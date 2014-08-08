@@ -1,0 +1,8 @@
+# $Id: Makefile.in 385262 2013-01-08 15:51:33Z ivanov $
+
+LIB_PROJ = xdiff
+SUB_PROJ = test
+PROJ_TAG = core
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

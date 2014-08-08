@@ -1,0 +1,10 @@
+# $Id: Makefile.in 19698 2003-03-19 19:23:23Z ucko $
+
+# Meta-makefile ("xcddalignview" library)
+#################################
+
+LIB_PROJ = cddalignview
+SUB_PROJ = demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

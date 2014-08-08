@@ -1,0 +1,1 @@
+#define BAM_LOAD_3_VERS 0x03000000

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 100177 2007-03-13 16:30:10Z ssikorsk $
+
+LIB_PROJ = ncbi_xdbapi_ftds64
+SUB_PROJ = samples
+
+REQUIRES = FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

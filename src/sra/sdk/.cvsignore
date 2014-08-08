@@ -1,0 +1,16 @@
+*.tar.gz
+*.columns
+*.sh
+dbg
+rel
+prof
+bin32
+bin64
+lib32
+lib64
+perl32
+perl64
+win
+centos
+mac
+proxysrv

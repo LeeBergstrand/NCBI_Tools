@@ -1,0 +1,11 @@
+# $Id: Makefile.in 118708 2008-01-31 17:58:33Z ucko $
+
+# Meta-makefile ("xstruct_util" library)
+#################################
+
+
+LIB_PROJ = xstruct_util
+SUB_PROJ = demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

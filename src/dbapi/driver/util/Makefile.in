@@ -1,0 +1,8 @@
+# $Id: Makefile.in 48943 2004-10-20 16:50:59Z ivanov $
+
+LIB_PROJ = dbapi_util_blobstore
+APP_PROJ = blobreader blobwriter
+SUB_PROJ = samples
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

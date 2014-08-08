@@ -1,0 +1,9 @@
+# $Id: Makefile.in 70962 2005-10-18 10:46:48Z ssikorsk $
+
+LIB_PROJ = ncbi_xdbapi_mysql
+SUB_PROJ = samples
+
+REQUIRES = MySQL
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

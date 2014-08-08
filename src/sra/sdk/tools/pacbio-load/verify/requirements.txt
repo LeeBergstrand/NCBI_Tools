@@ -1,0 +1,30 @@
+to perform the verify script, the following tools have to be in place:
+
+(1) perl
+(2) h5dump
+(3) vdb-dump
+(4) pacbio-load
+
+--> all the tools have to be in the search-path (h5dump too!)
+
+you will need a pacbio-hdf5-file (not compressed)
+you will need enough space to produce the vdb-output and the temp. dump-files
+
+an example how to call "pacbio-verify.sh" is in "pacbio-verify-example.sh"
+
+the first call to h5dump will take a long time (several minutes) to execute
+(the hdf5-lib loads the whole source-file and checks it)
+
+most of the checks in the SEQUENCE-table will also take a long time
+for performing the hdf5-dump and the vdb-dump
+
+- every one of the steps performs a binary-dump of one hdf5-table
+- then this binary file will be processed to create the same output-format as vdb-dump
+- then vdb-dump is called to dump one column of the created vdb-database
+- then the script compares both files
+
+It is possible that tables are missing in the hdf5-source.
+
+This script verifies that all data is correctly loaded from the hdf5-source.
+The script does NOT verify the processing of the regions-table, which
+divides every spot into READS.

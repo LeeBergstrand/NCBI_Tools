@@ -1,0 +1,9 @@
+# $Id: Makefile.in 36902 2004-03-25 14:20:25Z dicuccio $
+
+# Meta-makefile (xloader_cdd)
+##################################
+
+LIB_PROJ = xloader_trace
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,26 @@
+@HD	VN:1.0	SO:coordinate
+@SQ	SN:1	LN:197195432	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:10	LN:129993255	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:11	LN:121843856	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:12	LN:121257530	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:13	LN:120284312	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:14	LN:125194864	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:15	LN:103494974	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:16	LN:98319150	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:17	LN:95272651	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:18	LN:90772031	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:19	LN:61342430	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:2	LN:181748087	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:3	LN:159599783	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:4	LN:155630120	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:5	LN:152537259	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:6	LN:149517037	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:7	LN:152524553	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:8	LN:131738871	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:9	LN:124076172	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:M	LN:16299	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:X	LN:166650296	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@SQ	SN:Y	LN:15902555	UR:http://www.bcgsc.ca/downloads/genomes/10090/NCBI-Build-37/bwa_ind/genome/	AS:NCBI-Build-37	SP:Mus musculus
+@RG	ID:120079	PL:illumina	PU:818PTABXX.8	LB:INX213	SM:g1G	CN:BCCAGSC
+@PG	ID:0	VN:0.5.7	CL:bwa aln; bwa sampe 
+HS7_146:5:1208:21235:138392	133	1	197195175	0	*	=	197195175	0	TGCATTAAATGCTTGTGGGCAATGATCAATTACGTTTTTAGAAACCTTTCCTTTATGGAGAGAAGCAGAAAAAAG	CC@FFFFFHGHHHJJJJJJIJJJJGHHJGHIHGHHIIJJGHDIJGIHIJGGHHIFGGIFIHJJJJIGIJJHACDD	RG:Z:123467

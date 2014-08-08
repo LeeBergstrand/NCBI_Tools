@@ -1,0 +1,8 @@
+# $Id: Makefile.in 107010 2007-07-10 19:42:50Z kuznets $
+# Author:  Denis Vakatov (vakatov@ncbi.nlm.nih.gov)
+
+
+APP_PROJ = bdb_env_keeper
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

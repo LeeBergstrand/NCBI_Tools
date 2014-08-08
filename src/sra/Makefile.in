@@ -1,0 +1,10 @@
+# $Id: Makefile.in 363153 2012-05-14 17:55:02Z ucko $
+
+SUB_PROJ = sdk readers data_loaders app
+
+WATCHERS = vasilche ucko
+
+REQUIRES = -AIX -BSD -Cygwin -IRIX -OSF
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

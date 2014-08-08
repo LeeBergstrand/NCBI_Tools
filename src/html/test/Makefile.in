@@ -1,0 +1,10 @@
+# $Id: Makefile.in 383640 2012-12-17 16:27:43Z ivanov $
+
+# Meta-makefile ("XHTML" tests)
+#################################
+
+APP_PROJ = test_html
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

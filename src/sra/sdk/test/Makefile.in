@@ -1,0 +1,12 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+SUB_PROJ = ktst klib printf kfs krypto-test kfg kapp krypto kdb pmem \
+           align-test vdb re-enc tools vfs
+# commented: checksum compression curl_fetch dir_table ext-link kdf5
+#            proxy_exec proxy_srv sra xml
+# elided: blast judy_test sraxf trans
+#         
+# N/A: bam-load build cg-load dumper-test integration ncbi search sra-stat
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

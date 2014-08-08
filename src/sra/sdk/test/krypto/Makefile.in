@@ -1,0 +1,9 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+APP_PROJ = test-modes test-block-cross-error test-aes-ciphers \
+           test-cipher-speed test-encv2 test-encapptrunc testreenc testencrypt
+# test-parse test-aesavs test-wga-enc test-encfile test-wga-enc-write
+# test-csprng
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,9 @@
+# $Id: Makefile.in 90918 2006-10-02 14:39:59Z didenko $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = lds_indexer
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

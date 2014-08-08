@@ -1,0 +1,12 @@
+version 1;
+
+include 'vdb/vdb.vschema';
+
+function ascii hello #1.0 < * ascii fact_hello, ascii func_hello > () = vdb:hello;
+
+table test_aa #1.0
+{
+    column ascii col1 = .C1;
+    physical < ascii > zip_encoding #1.0 .C1 = col1;
+    trigger howdy = hello ();
+};

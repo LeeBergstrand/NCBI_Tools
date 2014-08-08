@@ -1,0 +1,9 @@
+# $Id: Makefile.in 87009 2006-07-31 18:31:45Z ucko $
+#
+# FreeTDS DBLIB library
+
+LIB_PROJ = dblib64
+
+srcdir = @srcdir@
+
+include @builddir@/Makefile.meta

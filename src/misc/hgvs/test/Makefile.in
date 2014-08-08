@@ -1,0 +1,9 @@
+# $Id: Makefile.in 330919 2011-08-15 19:10:47Z vakatov $
+
+# Meta-makefile
+##################################
+
+APP_PROJ = hgvs2variation test_hgvs_parser
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

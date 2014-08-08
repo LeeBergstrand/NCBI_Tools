@@ -1,0 +1,4 @@
+2012-11-26T22:11:14 bam-load.2.2.1 err: libs/align/writer-reference.c:cigar2offset:2162: data invalid while processing file within alignment module - Hard clipping of sequence data is not allowed
+2012-11-26T22:11:14 bam-load.2.2.1 warn: libs/align/writer-reference.c:cigar2offset:2162: data invalid while processing file within alignment module - Spot 'SRR006423.6228848': bad alignment to reference '20' at 60024
+2012-11-26T22:11:14 bam-load.2.2.1 err: libs/kfs/md5.c:KMD5SumFmtDelete:680: data invalid while processing file within alignment module - accession="8.0-obj" errors="1" status="failure"
+2012-11-26T22:11:14 bam-load.2.2.1 err: libs/kfs/md5.c:KMD5SumFmtDelete:680: data invalid while processing file within alignment module - load failed

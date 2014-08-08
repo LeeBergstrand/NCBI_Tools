@@ -1,0 +1,48 @@
+# $Id: Makefile.sources 16076 2013-05-19 02:07:57Z ucko $
+
+all source: expected/kqsh-kdb.c expected/kqsh-vdb.c expected/kqsh-sra.c
+	cmp expected/kqsh-kdb.c $(srcdir)/kqsh-kdb.c
+	cmp expected/kqsh-kdb.h $(srcdir)/kqsh-kdb.h
+	cmp expected/kqsh-vdb.c $(srcdir)/kqsh-vdb.c
+	cmp expected/kqsh-vdb.h $(srcdir)/kqsh-vdb.h
+	cmp expected/kqsh-sra.c $(srcdir)/kqsh-sra.c
+	cmp expected/kqsh-sra.h $(srcdir)/kqsh-sra.h
+
+include $(builddir)/Makefile.mk
+
+clean purge:
+	-$(RMDIR) expected
+
+srcdir2        = $(srcdir:.=..)
+ITF            = $(srcdir)/../../interfaces
+ITF2           = $(srcdir2)/../../interfaces
+KDB_THUNK_SRC  = manager database table column index meta namelist
+KDB_THUNK_INCS = $(KDB_THUNK_SRC:%=kdb/%.h)
+VDB_THUNK_SRC  = manager database schema table cursor
+VDB_THUNK_INCS = $(VDB_THUNK_SRC:%=vdb/%.h)
+SRA_THUNK_SRC  = sradb wsradb sraschema
+SRA_THUNK_INCS = $(SRA_THUNK_SRC:%=sra/%.h)
+
+expected/kqsh-kdb.c: $(srcdir)/kqsh-thunk.pl $(KDB_THUNK_INCS:%=$(ITF)/%)
+	mkdir -p expected
+	cd expected  &&  \
+	perl $(srcdir2)/kqsh-thunk.pl -mkdb -I$(ITF2) $(KDB_THUNK_INCS:%=-i%) \
+	    :KDBManager=mgr :KDatabase=db :KTable=tbl :KColumn=col \
+	    :KColumnBlob=blob :KIndex=idx :KMetadata=meta :KMDataNode=node \
+	    -h kqsh-kdb.h -c kqsh-kdb.c
+
+expected/kqsh-vdb.c: $(srcdir)/kqsh-thunk.pl $(VDB_THUNK_INCS:%=$(ITF)/%)
+	mkdir -p expected
+	cd expected  &&  \
+	perl $(srcdir2)/kqsh-thunk.pl -mvdb -I$(ITF2) $(VDB_THUNK_INCS:%=-i%) \
+	    :VDBManager=mgr VSchemaRuntimeTable=srtt VSchema=schema \
+	    VTypedecl=td VTypedesc=tdesc :VDatabase=db :VTable=tbl \
+	    :VCursor=curs \
+	    -h kqsh-vdb.h -c kqsh-vdb.c
+
+expected/kqsh-sra.c: $(srcdir)/kqsh-thunk.pl $(SRA_THUNK_INCS:%=$(ITF)/%)
+	mkdir -p expected
+	cd expected  &&  \
+	perl $(srcdir2)/kqsh-thunk.pl -msra -I$(ITF2) $(SRA_THUNK_INCS:%=-i%) \
+	    :SRAMgr=mgr	SRANamelist=nmlist :SRATable=tbl SRAColumn=col \
+	    VDBManager=vmgr -h kqsh-sra.h -c kqsh-sra.c

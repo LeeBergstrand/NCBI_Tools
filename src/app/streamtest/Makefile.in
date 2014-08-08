@@ -1,0 +1,6 @@
+# $Id: Makefile.in 129547 2008-06-03 12:28:28Z ludwigf $
+
+APP_PROJ = streamtest
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

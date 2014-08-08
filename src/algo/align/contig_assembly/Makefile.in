@@ -1,0 +1,12 @@
+# $Id: Makefile.in 145844 2008-11-17 20:46:15Z dicuccio $
+
+# Meta-makefile (algo/align/contig_assembly)
+#################################
+
+LIB_PROJ = xalgocontig_assembly
+SUB_PROJ = demo
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

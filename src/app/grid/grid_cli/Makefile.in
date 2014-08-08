@@ -1,0 +1,8 @@
+# $Id: Makefile.in 255631 2011-02-25 16:07:27Z kazimird $
+
+#################################
+
+APP_PROJ = grid_cli
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,15 @@
+#################################
+# $Id: Makefile.in 36604 2004-03-22 19:28:26Z vakatov $
+#################################
+
+# CTOOLS project cluster
+#################################
+
+REQUIRES = ctools C-Toolkit
+
+LIB_PROJ = ctools
+
+SUB_PROJ = asn test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

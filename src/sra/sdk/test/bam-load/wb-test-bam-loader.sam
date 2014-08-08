@@ -1,0 +1,18 @@
+@CO	Paired primary alignment plus multiple secondary alignments, with flag 0x2 clear
+@CO	-----------------------------------------------------
+@HD	VN:1.0	GO:none	SO:coordinate
+@RG	ID:SpotGroupA	PL:CAPILLARY
+@RG	ID:SpotGroup	PL:LS454
+@RG	ID:GS	PL:ILLUMINA
+@SQ	SN:dummy	LN:500
+@SQ	SN:ref	LN:50
+SpotGroup.SpotName	97	ref	11	60	10M	=	31	27	AGCTTGGTTT	=;>@?;%%%%	RG:Z:SpotGroup	OQ:Z:I%I<EFIIII	CS:Z:A213322333	CQ:Z:%&""""%&#)
+SpotGroup.SpotName	147	ref	31	60	10M	=	11	-27	TTTGATCCTG	%."%/####:	RG:Z:SpotGroup	OQ:Z:%&""""%&#)
+SpotGroup.SpotName	354	ref	11	60	10M	=	31	27	AGCTTGGTTT	=;>@?;%%%%	RG:Z:SpotGroup	OQ:Z:I%I<EFIIII
+SpotGroup.SpotName	402	ref	31	60	10M	=	11	-27	TTTGATCCTG	%."%/####:	RG:Z:SpotGroup	OQ:Z:%&""""%&#)
+SpotGroup.SpotName	359	ref	11	60	10M	=	31	27	AGCTTGGTTT	=;>@?;%%%%	RG:Z:SpotGroup	OQ:Z:I%I<EFIIII
+SpotGroup.SpotName	403	ref	31	60	10M	=	11	-27	TTTGATCCTG	%."%/####:	RG:Z:SpotGroup	OQ:Z:%&""""%&#)
+SpotGroup.SpotName	867	ref	11	60	10M	=	31	27	AGCTTGGTTT	=;>@?;%%%%	RG:Z:SpotGroup	OQ:Z:I%I<EFIIII
+SpotGroup.SpotName	1427	ref	31	60	10M	=	11	-27	TTTGATCCTG	%."%/####:	RG:Z:SpotGroup	OQ:Z:%&""""%&#)
+GS:17858806	67	ref	1	55	1I22M4N10M	=	395	394	AGATCCAGAGGTGGAAGAGGAAGCTTGGAACCC	8::::877367778<<<<<1;6:49:99878/-	RG:Z:GS	GC:Z:3S2G28S	GS:Z:TCTC	GQ:Z:::88	ZI:i:0	ZA:i:1
+GS:17858806	131	ref	395	55	10M6N23M	=	1	-394	TGTGTCTGATCCACCACTATCCAACCGATCCCG	4778*7455$*;3;;5=<;79978(2*44;48&	RG:Z:GS	GC:Z:28S2G3S	GS:Z:TCTC	GQ:Z:4*1;

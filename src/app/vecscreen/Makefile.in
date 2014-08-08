@@ -1,0 +1,10 @@
+# $Id: Makefile.in 385256 2013-01-08 15:38:13Z camacho $
+
+# Meta-makefile("APP" project)
+#################################
+
+APP_PROJ = vecscreen
+REQUIRES = objects algo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

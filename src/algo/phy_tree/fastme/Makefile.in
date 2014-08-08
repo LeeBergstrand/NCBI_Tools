@@ -1,0 +1,9 @@
+# $Id: Makefile.in 34102 2004-02-10 15:16:04Z jcherry $
+
+# Meta-makefile("FASTME" project)
+#################################
+
+LIB_PROJ = fastme
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

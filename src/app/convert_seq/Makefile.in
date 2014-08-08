@@ -1,0 +1,9 @@
+# $Id: Makefile.in 31195 2003-12-03 20:58:40Z ucko $
+
+# General sequence converter
+############################
+
+APP_PROJ = convert_seq
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

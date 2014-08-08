@@ -1,0 +1,64 @@
+# ===========================================================================
+#
+#                            PUBLIC DOMAIN NOTICE
+#               National Center for Biotechnology Information
+#
+#  This software/database is a "United States Government Work" under the
+#  terms of the United States Copyright Act.  It was written as part of
+#  the author's official duties as a United States Government employee and
+#  thus cannot be copyrighted.  This software/database is freely available
+#  to the public for use. The National Library of Medicine and the U.S.
+#  Government have not placed any restriction on its use or reproduction.
+#
+#  Although all reasonable efforts have been taken to ensure the accuracy
+#  and reliability of the software and data, the NLM and the U.S.
+#  Government do not and cannot warrant the performance or results that
+#  may be obtained by using this software or data. The NLM and the U.S.
+#  Government disclaim all warranties, express or implied, including
+#  warranties of performance, merchantability or fitness for any particular
+#  purpose.
+#
+#  Please cite the author in any work or product based on this material.
+#
+# ===========================================================================
+
+#
+# An example remote build server definitions file
+# 
+# Curently, only Windows build servers are supported, with linux as a client.
+#
+# This file should be prepared wor each remote server you intend to use and placed in $TOP/rhosts/
+#
+# To activate a remote build with this server:
+# On a Windows build server:
+# - for each source tree that is to be built by this server, map a Windows drive to its source directory, or any directory above it
+#   (you can service many source locations via one mapped drive)
+# - open a Cygwin session, set it up to use the 64- or 32- bit MS build tools, as needed
+# - start an instance of proxy-srv.exe (located in the VDB bin directory; if not, build one using make -C test/proxy-srv)
+# On the Linux client:
+# - run 'make <this file's name>' from the source root directory
+# - run 'make' as usual - this should now send build jobs to the server. The output files will be created under win/<linkage>/vc++/<arch>/
+#
+# To switch back to local builds, run 'make local' from the source root directory
+#
+# This file will be included into a Makefile.
+# For running a build remotely, the following variables should be defined :
+
+# there should be an instance of proxy-srv running on this server, listening on the default port:
+RHOST = ncbipcXXXX
+
+# the only one supported for now:
+OS = win
+
+# the only one supported for now:
+COMP = vc++
+
+# x86_64 or i386; make sure proxy-srv is running in an environment using matching (64- or 32-bit) MS build tools:
+ARCH = x86_64
+
+# Optionally, pick a location above the source tree of the build and set LHOME to it. If LHOME not specified, it will be set to $HOME 
+LHOME = /home/boshkina/internal
+
+# map a Windows drive to LHOME and place it here:
+RHOME = Z:
+

@@ -1,0 +1,10 @@
+# $Id: Makefile.in 74370 2005-12-15 18:22:31Z didenko $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = cgi_sample fcgi_sample cgi_session_sample
+SUB_PROJ = cgires
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

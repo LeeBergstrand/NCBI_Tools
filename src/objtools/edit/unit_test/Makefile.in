@@ -1,0 +1,11 @@
+#
+#
+#
+
+# $Id: Makefile.in 391148 2013-03-05 20:17:15Z kornbluh $
+
+APP_PROJ = unit_test_autodef unit_test_entry_edit
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

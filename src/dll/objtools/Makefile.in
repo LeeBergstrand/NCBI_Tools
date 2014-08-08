@@ -1,0 +1,30 @@
+# $Id: Makefile.in 197195 2010-07-14 16:15:14Z grichenk $
+
+SUB_PROJ =  \
+    ncbi_lds \
+    ncbi_lds2 \
+    ncbi_validator \
+    ncbi_xloader_blastdb \
+    ncbi_xloader_remoteblast \
+    ncbi_xloader_cdd \
+    ncbi_xloader_genbank \
+    ncbi_xloader_lds \
+    ncbi_xloader_lds2 \
+    ncbi_xloader_patcher \
+    ncbi_xloader_table \
+    ncbi_xloader_trace \
+    ncbi_xobjsimple \
+    ncbi_xreader \
+    ncbi_xreader_cache \
+    ncbi_xreader_id1 \
+    ncbi_xreader_id2 \
+    ncbi_xreader_pubseqos \
+    ncbi_xreader_pubseqos2 \
+    ncbi_eutils \
+    ncbi_align_format
+
+EXPENDABLE_SUB_PROJ = \
+    ncbi_xreader_gicache
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

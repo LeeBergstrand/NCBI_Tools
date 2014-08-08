@@ -1,0 +1,10 @@
+# $Id: Makefile.in 146743 2008-12-01 20:23:50Z camacho $
+
+SUB_PROJ =  \
+    ncbi_algo \
+    ncbi_algo_ms \
+    ncbi_algo_structure \
+    ncbi_blastinput
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

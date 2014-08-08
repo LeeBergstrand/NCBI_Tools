@@ -1,0 +1,9 @@
+# $Id: Makefile.in 16076 2013-05-19 02:07:57Z ucko $
+
+USR_PROJ = symlink
+LIB_PROJ = sraxf wsraxf
+
+EXTRA_CONFIGURABLES = Makefile.symlink
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

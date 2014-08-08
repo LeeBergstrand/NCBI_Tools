@@ -1,0 +1,1 @@
+#define JUDYTEST_VERS 0x01000000

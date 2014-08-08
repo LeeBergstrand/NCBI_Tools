@@ -1,0 +1,6 @@
+# $Id: Makefile.in 67456 2005-08-10 18:42:51Z grichenk $
+
+APP_PROJ = id2_fetch_simple
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

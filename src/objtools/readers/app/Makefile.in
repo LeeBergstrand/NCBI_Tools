@@ -1,0 +1,9 @@
+# $Id: Makefile.in 66593 2005-07-26 15:38:59Z grichenk $
+
+# Meta-makefile
+#################################
+
+APP_PROJ = ace2asn
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

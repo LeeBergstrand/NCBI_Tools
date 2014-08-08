@@ -1,0 +1,1 @@
+#define KDF5_TEST_VERS 0x01000001

@@ -1,0 +1,13 @@
+# $Id: Makefile.in 48204 2004-10-06 19:58:35Z jcherry $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+LIB_PROJ = xalgoseqqa
+
+SUB_PROJ = demo
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

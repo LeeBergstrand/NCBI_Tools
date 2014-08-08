@@ -1,0 +1,7 @@
+# $Id: Makefile.in 173670 2009-10-20 15:45:31Z gouriano $
+
+APP_PROJ = test_scoremat
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 1184 1999-05-15 23:07:07Z vakatov $
+# Author:  Denis Vakatov (vakatov@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile for the "Asn" lib
+#################################
+
+LIB_PROJ = asn
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

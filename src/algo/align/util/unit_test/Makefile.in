@@ -1,0 +1,9 @@
+# $Id: Makefile.in 362925 2012-05-11 13:42:10Z mozese2 $
+
+APP_PROJ = score_builder_unit_test align_filter_unit_test genomic_compart_unit_test
+PROJ_TAG = test
+
+REQUIRES = Boost.Test.Included
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

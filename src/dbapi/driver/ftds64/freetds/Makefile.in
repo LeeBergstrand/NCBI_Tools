@@ -1,0 +1,11 @@
+# $Id: Makefile.in 87026 2006-07-31 20:33:08Z ucko $
+#################################
+
+# FreeTDS Projects
+#################################
+
+
+SUB_PROJ = tds ctlib dblib odbc
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

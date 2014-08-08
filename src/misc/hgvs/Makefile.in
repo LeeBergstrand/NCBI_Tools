@@ -1,0 +1,14 @@
+# $Id: Makefile.in 357668 2012-03-26 14:20:02Z astashya $
+
+# Meta-makefile
+##################################
+
+LIB_PROJ = hgvs_parser
+SUB_PROJ = test
+
+REQUIRES = Boost.Spirit objects
+
+WATCHERS = astashya
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,33 @@
+# $Id: Makefile.install_config 16076 2013-05-19 02:07:57Z ucko $
+
+include $(builddir)/Makefile.mk
+DEST = $(libdir)/ncbi/config.kfg
+
+all: $(DEST)
+
+schemadir=$(libdir)/ncbi/schemas
+$(DEST):
+	@if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  ifdir=$(srcdir)/../../interfaces; \
+	  test -d "$$ifdir" || \
+	    ifdir=$(top_srcdir)/src/sra/sdk/interfaces ; \
+	  test -d "$$ifdir" || \
+	    ifdir=$(top_srcdir)/src/internal/sra/sdk/interfaces ; \
+	  for d in align insdc ncbi sra vdb ; do \
+	    mkdir -p $(schemadir)/$$d && \
+	    $(RM) $(schemadir)/$$d/* && \
+	    $(BINCOPY) $$ifdir/$$d/*schema $(schemadir)/$$d/ ; \
+	  done; \
+	  case $(OSTYPE) in \
+	    darwin)  type=mac   ;; \
+	    linux)   type=linux ;; \
+	    solaris) type=sun   ;; \
+	  esac; \
+	  sed -e 's,\$$(TOP)/interfaces,$(schemadir),' \
+	    $(srcdir)/config.$$type.kfg > $(DEST) ; \
+	fi
+
+clean:;
+
+purge:
+	-$(RM) $(DEST)

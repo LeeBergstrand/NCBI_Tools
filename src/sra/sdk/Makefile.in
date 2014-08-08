@@ -1,0 +1,6 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+SUB_PROJ = libs tools test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,8 @@
+#################################
+# $Id: Makefile.in 108294 2007-08-06 17:29:58Z Gouriano $
+#################################
+
+DLL_PROJ = ncbi_xloader_trace
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

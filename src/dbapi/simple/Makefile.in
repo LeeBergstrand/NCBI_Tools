@@ -1,0 +1,10 @@
+# $Id: Makefile.in 187921 2010-04-06 19:04:13Z ucko $
+
+LIB_PROJ = sdbapi
+
+SUB_PROJ = test
+
+REQUIRES = FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

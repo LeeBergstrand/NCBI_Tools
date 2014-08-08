@@ -1,0 +1,9 @@
+# $Id: Makefile.in 140909 2008-09-22 18:25:56Z ucko $
+
+# Meta-makefile ("objtools/writers" project)
+############################################
+
+LIB_PROJ = xobjwrite
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

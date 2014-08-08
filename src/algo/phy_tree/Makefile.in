@@ -1,0 +1,13 @@
+# $Id: Makefile.in 202110 2010-08-24 14:55:34Z boratyng $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+LIB_PROJ = xalgophytree
+
+SUB_PROJ = fastme test unit_test phytree_format 
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

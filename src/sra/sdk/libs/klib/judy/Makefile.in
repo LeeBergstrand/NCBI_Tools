@@ -1,0 +1,7 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+USR_PROJ = sources
+APP_PROJ = Judy1TablesGen JudyLTablesGen
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

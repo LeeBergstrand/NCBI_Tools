@@ -1,0 +1,9 @@
+# $Id: Makefile.in 218383 2010-12-28 16:47:25Z ucko $
+
+APP_PROJ = blastfmt_unit_test
+PROJ_TAG = test
+
+REQUIRES = algo objects gui PNG Boost.Test.Included wxWidgets MESA
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

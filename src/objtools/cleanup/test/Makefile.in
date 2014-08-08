@@ -1,0 +1,8 @@
+# $Id: Makefile.in 202308 2010-08-25 03:18:52Z vakatov $
+
+APP_PROJ = test_basic_cleanup unit_test_basic_cleanup unit_test_extended_cleanup
+PROJ_TAG = test
+SUB_PROJ = 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,8 @@
+# $Id: Makefile.in 140909 2008-09-22 18:25:56Z ucko $
+
+LIB_PROJ = gene_info_writer
+
+SUB_PROJ = unit_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

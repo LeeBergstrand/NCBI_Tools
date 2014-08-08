@@ -1,0 +1,12 @@
+*.vers.h
+*.txt
+*.sh
+*.dump
+*.kar
+*.tar
+*.vdb
+size_comp.pl
+sort_sam.pl
+V2.1.7
+exclude_list
+short_load

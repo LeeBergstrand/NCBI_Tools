@@ -1,0 +1,8 @@
+# $Id: Makefile.in 118144 2008-01-24 17:17:23Z ivanov $
+
+APP_PROJ = subcheck
+
+REQUIRES = objects
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,6 @@
+# $Id: Makefile.in 43811 2004-07-20 18:14:05Z kuznets $
+
+APP_PROJ = dbapi_cache_admin
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

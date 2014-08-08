@@ -1,0 +1,8 @@
+#################################
+# $Id: Makefile.in 379839 2012-11-05 19:12:43Z kazimird $
+#################################
+
+APP_PROJ = netcache_control ncfetch netschedule_control
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

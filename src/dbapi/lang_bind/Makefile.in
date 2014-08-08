@@ -1,0 +1,6 @@
+# $Id: Makefile.in 54016 2005-01-18 22:38:13Z ucko $
+
+EXPENDABLE_SUB_PROJ = python
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

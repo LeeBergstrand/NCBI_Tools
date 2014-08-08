@@ -1,0 +1,8 @@
+# $Id: Makefile.in 337651 2011-09-14 13:43:40Z ucko $
+
+SUB_PROJ = freetds ctlib
+
+REQUIRES = FreeTDS
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

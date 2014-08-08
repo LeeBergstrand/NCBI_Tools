@@ -1,0 +1,6 @@
+# $Id: Makefile.in 203210 2010-08-31 16:20:14Z ucko $
+
+USR_PROJ = check
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

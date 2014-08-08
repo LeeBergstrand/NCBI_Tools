@@ -1,0 +1,9 @@
+# $Id: Makefile.in 114818 2007-11-29 23:07:52Z slottad $
+
+# Meta-makefile("algo/ms" projects)
+#################################
+
+SUB_PROJ = formats omssa 
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

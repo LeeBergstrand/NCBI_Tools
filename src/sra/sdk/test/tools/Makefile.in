@@ -1,0 +1,10 @@
+# $Id: Makefile.in 14717 2013-03-08 15:25:05Z ucko $
+
+SUB_PROJ = fastq-loader
+# sra-pileup nencvalid vdb-dump dump-test
+# commented: srapath sra-load
+# elided: sra-dump sra-stat
+# N/A: copycat
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

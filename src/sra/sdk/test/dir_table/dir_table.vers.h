@@ -1,0 +1,1 @@
+#define DIR_TABLE_VERS 0x01000000

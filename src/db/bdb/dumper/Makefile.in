@@ -1,0 +1,12 @@
+#################################
+# $Id: Makefile.in 42017 2004-06-17 16:28:24Z kuznets $
+# Author:  Anatoliy Kuznetsov (kuznets@ncbi.nlm.nih.gov)
+#################################
+
+# Meta-makefile -- BDB dumper
+#################################
+
+APP_PROJ = bdb_dump
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

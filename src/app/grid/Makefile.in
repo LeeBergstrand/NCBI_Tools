@@ -1,0 +1,7 @@
+# $Id: Makefile.in 255631 2011-02-25 16:07:27Z kazimird $
+
+# Grid applications
+SUB_PROJ = grid_cli remote_app cgi2rcgi cgi_tunnel2grid util test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

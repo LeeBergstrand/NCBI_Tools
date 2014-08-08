@@ -1,0 +1,6 @@
+# $Id: Makefile.in 119825 2008-02-14 17:26:56Z grichenk $
+
+DTD_PROJ = ehistory
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

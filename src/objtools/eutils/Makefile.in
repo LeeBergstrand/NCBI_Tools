@@ -1,0 +1,10 @@
+# $Id: Makefile.in 119826 2008-02-14 17:28:25Z grichenk $
+
+# Meta-makefile("eutils" project)
+#################################
+
+SUB_PROJ = egquery elink epost esearch espell esummary linkout einfo uilist \
+           ehistory api
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

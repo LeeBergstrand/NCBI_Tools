@@ -1,0 +1,10 @@
+#!/home/killian2/asm-trace-new/BUILD_DIR/bin64/kqsh -u
+open vdb as M;
+create schema as S using M;
+alter S load "test-math.vschema";
+show S.t_round;
+create or replace table "out" as T with schema S.t_round using M;
+create cursor C on T for update;
+alter cursor C add column xform;
+alter cursor C add column ctl;
+open C;

@@ -1,0 +1,8 @@
+# $Id: Makefile.in 186653 2010-03-23 14:34:48Z ucko $
+
+APP_PROJ = hfilter
+
+REQUIRES = objects algo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

@@ -1,0 +1,5 @@
+*.gz
+*.tar
+*.[ch]
+*.vers
+*.def

@@ -1,0 +1,14 @@
+# $Id: Makefile.in 349969 2012-01-17 16:32:01Z ivanovp $
+# Author:  Denis Vakatov (vakatov@ncbi.nlm.nih.gov)
+
+# Test suite for library "xconnect"
+#################################
+
+LIB_PROJ =
+
+APP_PROJ = test_nc_stress test_nc_stress_pubmed logs_splitter logs_replay
+PROJ_TAG = test
+
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

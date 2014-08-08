@@ -1,0 +1,13 @@
+# $Id: Makefile.in 371957 2012-08-14 00:00:21Z ucko $
+
+SUB_PROJ =  \
+    ncbi_general \
+    ncbi_misc \
+    ncbi_mmdb \
+    ncbi_pub \
+    ncbi_seq \
+    ncbi_seqext \
+    ncbi_trackmgr
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

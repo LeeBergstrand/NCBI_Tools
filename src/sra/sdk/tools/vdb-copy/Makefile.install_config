@@ -1,0 +1,16 @@
+# $Id: Makefile.install_config 14717 2013-03-08 15:25:05Z ucko $
+
+include $(builddir)/Makefile.mk
+DEST = $(libdir)/ncbi/vdb-copy.kfg
+
+all: $(DEST)
+
+$(DEST): $(srcdir)/vdb-copy.kfg
+	@if [ '$(BINCOPY)' != '@:' -a -d $(libdir) -a -w $(libdir) -a $(srcdir) != . ]; then \
+	  $(BINCOPY) $(srcdir)/vdb-copy.kfg $(DEST); \
+	fi
+
+clean:;
+
+purge:
+	-$(RM) $(DEST)

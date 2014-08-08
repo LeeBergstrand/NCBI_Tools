@@ -1,0 +1,4 @@
+* * * * * /bin/bash /panfs/pan1/sra-test/autobuild/64/autobuild/monitor.sh /panfs/pan1/sra-test/autobuild/64/autobuild L64 anatoly.boshkin@nih.gov 
+* * * * * /bin/bash /panfs/pan1/sra-test/autobuild/64/autobuild/checkout.sh /panfs/pan1/sra-test/autobuild/64/
+* * * * * /bin/bash /panfs/pan1/sra-test/autobuild/64/autobuild/build.sh L64 /panfs/pan1/sra-test/autobuild/64/autobuild /panfs/pan1/sra-test/autobuild/64/ pilot dynamic
+* * * * * /bin/bash /panfs/pan1/sra-test/autobuild/64/autobuild/build.sh W64 /panfs/pan1/sra-test/autobuild/64/autobuild /panfs/pan1/sra-test/autobuild/64/ running boshkina dynamic

@@ -1,0 +1,10 @@
+# $Id: Makefile.in 362519 2012-05-09 18:16:00Z whlavina $
+
+# Meta-makefile("Gnomon" project)
+#################################
+
+APP_PROJ = localfinder
+PROJ_TAG = demo
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

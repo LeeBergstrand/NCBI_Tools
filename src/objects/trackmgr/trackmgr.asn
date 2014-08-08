@@ -1,0 +1,179 @@
+--- $Id: trackmgr.asn 387456 2013-01-29 20:14:23Z clausen $
+---
+--- Definitions for the TrackManager service
+---
+
+NCBI-TrackManager DEFINITIONS ::=
+BEGIN
+
+EXPORTS TMgr-Request, TMgr-Reply, TMgr-GenomeContext,
+        TMgr-ClientInfo, TMgr-DisplayTrackRequest,
+        TMgr-DisplayTrackReply, TMgr-AssemblySpec,TMgr-AttrSpec,
+        TMgr-Assembly, TMgr-Attribute, TMgr-DisplayTrack,
+        TMgr-DatasetItem, TMgr-DisplayTrackChoice,
+        TMgr-TrackAttrValueRequest, TMgr-AttrRequest, TMgr-ValueRequest,
+        TMgr-TrackAttrValueReply, TMgr-AttrReply, TMgr-TrackAttributes,
+        TMgr-AttrValueReply, TMgr-MessageLevel, TMgr-Message;
+
+---
+--- Top-level request/reply
+---
+TMgr-Request ::= CHOICE {
+    display-tracks TMgr-DisplayTrackRequest,
+    switch-display-tracks TMgr-SwitchTrackContextRequest,
+    track-attr-values TMgr-TrackAttrValueRequest
+}
+
+TMgr-Reply ::= CHOICE {
+    display-tracks TMgr-DisplayTrackReply,
+    switch-display-tracks TMgr-SwitchTrackContextReply,
+    track-attr-values TMgr-TrackAttrValueReply
+}
+
+TMgr-GenomeContext ::= CHOICE {
+    assembly TMgr-AssemblySpec,
+    locality CHOICE {
+        chromosome VisibleString
+        --scaffold, sequence
+    }
+}
+
+TMgr-ClientInfo ::= SEQUENCE {
+    client-name VisibleString,
+    context VisibleString OPTIONAL,
+    inhouse BOOLEAN DEFAULT FALSE
+    --permission keys etc
+}
+
+TMgr-DisplayTrackRequest ::= SEQUENCE {
+    client TMgr-ClientInfo,
+    genome-contexts SEQUENCE OF TMgr-GenomeContext OPTIONAL,
+    attrs SEQUENCE OF TMgr-AttrSpec OPTIONAL
+}
+
+TMgr-DisplayTrackReply ::= SEQUENCE {
+    messages SEQUENCE OF TMgr-Message OPTIONAL,
+    display-tracks SEQUENCE OF TMgr-DisplayTrack OPTIONAL
+    --tracks TMgr-DisplayTracks OPTIONAL
+}
+
+TMgr-SwitchTrackContextRequest ::= SEQUENCE {
+    client TMgr-ClientInfo,
+    new-genome-contexts SEQUENCE OF TMgr-GenomeContext,
+    current-dtrack-ids SEQUENCE OF INTEGER
+}
+
+TMgr-SwitchTrackContextReply ::= SEQUENCE {
+    messages SEQUENCE OF TMgr-Message OPTIONAL,
+    display-tracks SEQUENCE OF TMgr-DisplayTrackChoice OPTIONAL
+}
+
+TMgr-TrackAttrValueRequest ::= SEQUENCE {
+    track-type-list NULL OPTIONAL,          -- request all track type names
+    attr-list TMgr-AttrRequest OPTIONAL,    -- request attributes associated
+                                            -- with all or some track types
+    value-list TMgr-ValueRequest OPTIONAL   -- request values associated with
+                                            -- attribute list
+}
+
+TMgr-AttrRequest ::= CHOICE {
+    all-attrs NULL,                         -- request all attributes
+    track-type-list SET OF VisibleString    -- request attributes associated
+                                            -- with track types in list
+}
+
+TMgr-ValueRequest ::= SET OF VisibleString  -- list of attributes to return
+                                            -- values for
+
+TMgr-TrackAttrValueReply ::= SEQUENCE {
+    track-type-list SET OF VisibleString OPTIONAL,   -- list of track types
+    attr-list TMgr-AttrReply OPTIONAL,
+    value-list SET OF TMgr-AttrValueReply OPTIONAL
+}
+
+TMgr-AttrReply ::= CHOICE {
+    all-attrs SET OF VisibleString,             -- list of attributes
+    track-attr-list SET OF TMgr-TrackAttributes
+}
+
+TMgr-TrackAttributes ::= SEQUENCE {
+    track-name VisibleString,                   -- track type name
+    attributes SET OF VisibleString             -- list of attributes
+                                                -- associated with track type
+                                                -- name
+}
+
+TMgr-AttrValueReply ::= SEQUENCE {
+    attr-name VisibleString,
+    value-list SET OF VisibleString
+}
+
+TMgr-SwitchTrackExceptionCode ::= INTEGER {
+    track-not-found (0), -- corresponding track not found in new genome context
+    other (255)
+}
+
+TMgr-SwitchTrackException ::= SEQUENCE {
+    dtrack-id INTEGER,
+    code TMgr-SwitchTrackExceptionCode OPTIONAL
+}
+
+TMgr-AssemblySpec ::= CHOICE {
+    name SEQUENCE {
+        tax-id INTEGER,
+        name VisibleString
+    },
+    accession VisibleString
+}
+
+TMgr-AttrSpec ::= SEQUENCE {
+    key VisibleString,
+    value VisibleString
+}
+
+TMgr-Assembly ::= SEQUENCE {
+    accession VisibleString,
+    name VisibleString,
+    short-name VisibleString OPTIONAL,
+    description VisibleString OPTIONAL,
+    is-complete BOOLEAN OPTIONAL
+}
+
+TMgr-Attribute ::= SEQUENCE {
+    key VisibleString,
+    value VisibleString
+}
+
+TMgr-DisplayTrack ::= SEQUENCE {
+    dtrack-id INTEGER,
+    name VisibleString,
+    attrs SEQUENCE OF TMgr-Attribute OPTIONAL,
+    data SEQUENCE OF TMgr-DatasetItem
+    -- display settings
+}
+
+TMgr-DatasetItem ::= SEQUENCE {
+    name VisibleString,
+    attrs SEQUENCE OF TMgr-Attribute OPTIONAL
+}
+
+TMgr-DisplayTrackChoice ::= CHOICE {
+    track TMgr-DisplayTrack,
+    switch-exception TMgr-SwitchTrackException
+}
+
+TMgr-MessageLevel ::= INTEGER {
+    warning (0),
+    error (1),
+    info (2),
+    diagnostic (3)
+}
+
+TMgr-Message ::= SEQUENCE {
+    level TMgr-MessageLevel,
+    message VisibleString
+}
+
+
+END
+

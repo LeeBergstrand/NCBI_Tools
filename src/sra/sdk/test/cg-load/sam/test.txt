@@ -1,0 +1,138 @@
+################################################################################
+map2sam
+cd /net/snowman/vol/export4/klymenka/cgatools/cgatools-1.5.0.31-MacOSX_binary-x86_64/bin
+  496  D=/panfs/pan1/trace_work/scratch/CompleteGenomics/ftp2.completegenomics.com/YRI_trio/MAP_Build36/NA19238/GS19238-1100-36-MAP/GS10351-FS3-L01
+  497  ./cgatools map2sam --reads $D/reads_GS10351-FS3-L01_001.tsv.bz2 --mappings $D/mapping_GS10351-FS3-L01_001.tsv.bz2
+  498  D=/panfs/pan1/trace_work/scratch/CompleteGenomics/ftp2.completegenomics.com/YRI_trio/MAP_Build36/NA19239/GS19239-1100-36-MAP/GS10353-FS3-L01
+  499  ./cgatools map2sam --reads $D/reads_GS10353-FS3-L01_001.tsv.bz2 --mappings $D/mapping_GS10353-FS3-L01_001.tsv.bz2
+  
+MAP=/panfs/pan1/sra-test/klymenka/cg/YRI_trio.tiny/MAP/GS10351-FS3-L01
+/panfs/pan1/sra-test/bin/cgatools map2sam -r $MAP/100.reads_GS10351-FS3-L01_001.tsv.bz2 -m $MAP/100.mapping_GS10351-FS3-L01_001.tsv.bz2 -s /panfs/pan1/sra-test/complete/data/ref/build36.crr > ~/cg-test/100.sam
+################################################################################
+cg-load -Q 0 -f -k /panfs/pan1/sra-test/golikov/loader/cg/chr_build36/analysis.bam.cfg -m /panfs/pan1/sra-test/golikov/loader/cg/YRI_trio.tiny/MAP -o ~/RUN -a /panfs/pan1/sra-test/golikov/loader/cg/YRI_trio.tiny/ASM && echo +
+################################################################################
+export PATH=~/cvs/internal.new/asm-trace/OUTDIR/bin64:$PATH
+export CG_TEST=~/cg-test
+cd $CG_TEST
+################################################################################
+# step 1.1. create cg dump by cgatools
+CG_SAM=100
+# step 1.2. run sam-dump
+NCBI_SAM=SRZ-tiny
+RUN=/panfs/pan1/sra-test/golikov/loader/cg/SRZ-tiny
+RUN=~/RUN
+sam-dump -u $RUN > $NCBI_SAM.sam
+################################################################################
+# step 2
+# split by chromosome; order by position
+# CG:
+#   input : $CG_TEST/$CG_SAM.sam
+#   output: $CG_TEST/split.1/$CG_SAM*
+# NCBI:
+#   input : $CG_TEST/$NCBI_SAM.sam
+#   output: $CG_TEST/split.1/$NCBI_SAM*
+export PATH=~/cvs/internal/asm-trace/test/cg-load:$PATH
+split-sam.pl -d split.1 $CG_SAM.sam
+split-sam.pl -d split.1 $NCBI_SAM.sam -k
+# test
+mkdir test
+# CG:
+cat split.1/$CG_SAM* | sort > test/$CG_SAM.out
+sort $CG_SAM.sam > test/$CG_SAM.in
+diff test/$CG_SAM.out test/$CG_SAM.in
+# NCBI: 
+cat split.1/$NCBI_SAM* | sort > test/$NCBI_SAM.out
+sort $NCBI_SAM.sam > test/$NCBI_SAM.in
+diff test/$NCBI_SAM.out test/$NCBI_SAM.in && rm test/$NCBI_SAM.*
+################################################################################
+# step 2
+# reorder spit files
+# CG:
+#   input : split.1/$CG_SAM*
+#   output: sorted.2/$CG_SAM*
+# NCBI:
+#   input : split.1/$NCBI_SAM*
+#   output: sorted.2/$NCBI_SAM*
+sort-sams.pl --input split.1 --output sorted.2
+# test
+# CG:
+sort $CG_SAM.sam > test/$CG_SAM.in
+cat sorted.2/$CG_SAM* | sort > test/$CG_SAM.out
+diff test/$CG_SAM.out test/$CG_SAM.in && rm test/$CG_SAM.*
+# NCBI: 
+sort $NCBI_SAM.sam > test/$NCBI_SAM.in
+cat sorted.2/$NCBI_SAM* | sort > test/$NCBI_SAM.out
+diff test/$NCBI_SAM.out test/$NCBI_SAM.in && rm test/$NCBI_SAM.*
+################################################################################
+# step 3
+# restore seq, qual in map2sam; filter out not-matching lines
+#   input : sorted.2/
+#   output: filtered.3/
+mv $CG_TEST/sorted.2/$CG_SAM.sam.\* $CG_TEST/sorted.2/$CG_SAM.sam.STAR
+mv $CG_TEST/sorted.2/$NCBI_SAM.sam.\* $CG_TEST/sorted.2/$NCBI_SAM.sam.STAR
+restore_n_filter.pl -n "$NCBI_SAM.sam.*"
+    -c "$CG_SAM.sam.*" -i sorted.2 -o filtered.3 -f
+# test
+# CG:
+rm test/*
+cut -f -9 $CG_SAM.sam | sort > test/$CG_SAM.in
+cat filtered.3/$CG_SAM* | cut -f -9 | sort > test/$CG_SAM.out
+diff test/$CG_SAM.out test/$CG_SAM.in && rm test/$CG_SAM.*
+# NCBI:
+rm test/*
+sort $NCBI_SAM.sam > test/$NCBI_SAM.in
+cat filtered.3/$NCBI_SAM* | sort > test/$NCBI_SAM.out
+diff test/$NCBI_SAM.out test/$NCBI_SAM.in && rm test/$NCBI_SAM.*
+################################################################################
+# step 4
+# separate: aligned, unaligned, headers
+# split ncbi unaligned records by RNEXT
+separate-al_unal_hd.pl -i filtered.3 -o separated.4 -c $CG_SAM -n $NCBI_SAM -f
+# test
+# CG:
+rm test/*
+cat *3/$CG_SAM*  | sort > test/$CG_SAM.in
+cat *4*/$CG_SAM* | sort > test/$CG_SAM.out
+diff test/$CG_SAM.in test/$CG_SAM.out && rm test/$CG_SAM.*
+# NCBI:
+rm test/*
+sort $NCBI_SAM.sam > test/$NCBI_SAM.in
+cat *4*/$NCBI_SAM* | sort > test/$NCBI_SAM.out
+diff test/$NCBI_SAM.in test/$NCBI_SAM.out && rm test/$NCBI_SAM.*
+################################################################################
+# step 5
+# compare aligned records:
+# each pair of ($CG_SAM.sam.*.filtered $NCBI_SAM.sam.*.filtered)
+aligned-sam-diff.pl --in separated.4.aligned --cg "$CG_SAM*" --ncbi "$NCBI_SAM*"
+################################################################################
+# step 6
+# sort unaligned records
+sort-uneligned.pl -i separated.4.unaligned -o separated.5.unaligned-sorted
+#   input : separated.4.unaligned/
+#   output: separated.5.unaligned-sorted/
+# test
+# CG:
+rm test/*
+cat separated.4.unaligned/$CG_SAM* | sort > test/$CG_SAM.in
+cat *5*/$CG_SAM* | sort > test/$CG_SAM.out
+diff test/$CG_SAM.in test/$CG_SAM.out && rm test/$CG_SAM.*
+# NCBI:
+cat separated.4.unaligned/$NCBI_SAM* | sort > test/$NCBI_SAM.in
+cat *5*/$NCBI_SAM* | sort > test/$NCBI_SAM.out
+diff test/$NCBI_SAM.in test/$NCBI_SAM.out && rm test/$NCBI_SAM.*
+################################################################################
+# step 7
+# compare unaligned records:
+# each pair of ($CG_SAM.sam.*.filtered $NCBI_SAM.sam.*.filtered)
+#    in separated.5.unaligned-sorted
+unaligned-sam-diff.pl --in *5*
+    --cg "$CG_SAM*.filtered.nomatch" --ncbi "$NCBI_SAM*"
+################################################################################
+# step 8
+# sort unaligned-unmapped records
+cd separated.4.aligned-unmapped
+
+sort -t: -k2 -n 100.sam.STAR > 100.sam.STAR.s
+sort -n SRZ-tiny.sam.STAR > SRZ-tiny.sam.STAR.s
+
+sam-diff.pl --cg 100.sam.STAR.s --ncbi SRZ-tiny.sam.STAR.s -t unaligned-unmapped

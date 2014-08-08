@@ -1,0 +1,8 @@
+# $Id: Makefile.in 128326 2008-05-21 15:57:16Z thiessen $
+#################################
+
+
+LIB_PROJ = wx_tools
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

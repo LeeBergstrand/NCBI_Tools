@@ -1,0 +1,2 @@
+[Compiler]
+PreprocessorDefinitions = LIBPREFIX=;SHLIBEXT=.dll;WINDOWS

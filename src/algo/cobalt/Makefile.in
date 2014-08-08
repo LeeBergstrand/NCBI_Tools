@@ -1,0 +1,11 @@
+# $Id: Makefile.in 152231 2009-02-12 17:00:33Z boratyng $
+
+# Meta-makefile("ALGO" project)
+#################################
+
+
+LIB_PROJ = cobalt
+SUB_PROJ = demo unit_test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta

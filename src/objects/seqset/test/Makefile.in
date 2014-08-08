@@ -1,0 +1,7 @@
+# $Id: Makefile.in 380158 2012-11-08 17:33:20Z vasilche $
+
+APP_PROJ = test_seqio
+PROJ_TAG = test
+
+srcdir = @srcdir@
+include @builddir@/Makefile.meta
